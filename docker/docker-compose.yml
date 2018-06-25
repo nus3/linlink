@@ -1,0 +1,24 @@
+version: '3.6'
+services:
+    linlink:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: "linlink"
+        command: "/sbin/init"
+        volumes:
+            - ./html:/var/www/html
+            - ./nginx/conf.d:/etc/nginx/conf.d/
+            - ./php-fpm:/etc/php-fpm.d/
+            - ../../linlink:/var/www/linlink
+        tty: true
+        expose:
+            - 80
+        privileged: true
+        environment:
+            VIRTUAL_HOST: linlink.local.jp
+
+networks:
+    default:
+        external:
+            name: common_link
