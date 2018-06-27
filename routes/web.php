@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'middleware' => [
+    ],
+    'uses' => 'LinkController@index'
+])->name('LinkIndex');
