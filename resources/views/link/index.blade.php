@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-
+HelloWorld
 @endsection
 
 @section('pageJs')
