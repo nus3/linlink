@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+html {
+    height: 100%;
+}
+  
+body {
+    margin: 0;
+    height: 100%;
+    font-family: -apple-system, system-ui, "Helvetica Neue", YuGothic, "Yu Gothic", Verdana, Meiryo, sans-serif;
+    font-size: 14px;
+}
+
+/*
+|--------------------------------------------------------------------------
+|  common
+|--------------------------------------------------------------------------
+*/
+
+.display-none {
+    display: none;
+}
+
+/*
+|--------------------------------------------------------------------------
+|  navigation
+|--------------------------------------------------------------------------
+*/
+
+.header {
+    position: fixed;
+    z-index: 100;
+}
+
+.header-logo {
+    float: left;
+    width: 60px;
+    padding-top: 3px;
+    margin: 0 10px;
+}
+
