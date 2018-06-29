@@ -21,6 +21,12 @@ body {
     display: none;
 }
 
+.wrapper {
+    position: relative;
+    top: 64px;
+    height: 100%;
+}
+
 /*
 |--------------------------------------------------------------------------
 |  navigation
@@ -37,5 +43,29 @@ body {
     width: 60px;
     padding-top: 3px;
     margin: 0 10px;
+}
+
+.sidebar {
+    position: fixed;
+    height: auto;
+    min-height: 100%;
+    padding: 0;
+    width: 180px;
+    z-index: 99;
+}
+
+.sidebar .collection {
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar .collection-item {
+    padding: 15px 20px;
+}
+
+.sidebar a.collection-item {
+    color: #ffffff;
+    font-size: 16px;
 }
 

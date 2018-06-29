@@ -1,12 +1,19 @@
 @extends('layouts.main')
 @include('layouts.header')
+@include('layouts.sidebar')
 @include('layouts.footer')
 
 @section('pageCss')
 @endsection
 
 @section('content')
-HelloWorld
+
+<div class="wrapper">
+    @yield('sidebar')
+
+
+
+</div>
 @endsection
 
 @section('pageJs')
