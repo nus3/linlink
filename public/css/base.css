@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+html {
+    height: 100%;
+}
+  
+body {
+    margin: 0;
+    height: 100%;
+    font-family: -apple-system, system-ui, "Helvetica Neue", YuGothic, "Yu Gothic", Verdana, Meiryo, sans-serif;
+    font-size: 14px;
+}
+
+/*
+|--------------------------------------------------------------------------
+|  common
+|--------------------------------------------------------------------------
+*/
+
+.display-none {
+    display: none;
+}
+
+.wrapper {
+    position: relative;
+    top: 64px;
+    height: 100%;
+}
+
+/*
+|--------------------------------------------------------------------------
+|  navigation
+|--------------------------------------------------------------------------
+*/
+
+.header {
+    position: fixed;
+    z-index: 100;
+}
+
+.header-logo {
+    float: left;
+    width: 60px;
+    padding-top: 3px;
+    margin: 0 10px;
+}
+
+.sidebar {
+    position: fixed;
+    height: auto;
+    min-height: 100%;
+    padding: 0;
+    width: 180px;
+    z-index: 99;
+}
+
+.sidebar .collection {
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar .collection-item {
+    padding: 15px 20px;
+}
+
+.sidebar a.collection-item {
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #00838f;
+}
+
+.sidebar a.collection-item:hover {
+    color: #00838f;
+}
+
+.sidenav {
+    background-color: #00838f;
+}
+
+.sidenav.collection {
+    border: none;
+}
+
+.sidenav.collection .collection-item {
+    padding: 15px 20px;
+}
+
+.sidenav.collection .collection-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidenav a.collection-item {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #00838f;
+}
+
+.sidenav a.collection-item:hover {
+    color: #00838f;
+}
+
+/*
+|--------------------------------------------------------------------------
+|  max-width: 993px
+|--------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 993px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+/*
+|--------------------------------------------------------------------------
+|  max-width: 601px
+|--------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 601px) {
+    .header-logo {
+        padding-top: 0;
+    }
+}
