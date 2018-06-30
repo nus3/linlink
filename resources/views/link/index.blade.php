@@ -12,7 +12,6 @@
     @yield('sidebar')
 
 
-
 </div>
 @endsection
 

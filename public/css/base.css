@@ -73,3 +73,53 @@ body {
 .sidebar a.collection-item:hover {
     color: #00838f;
 }
+
+.sidenav {
+    background-color: #00695c;
+}
+
+.sidenav.collection {
+    border: none;
+}
+
+.sidenav.collection .collection-item {
+    padding: 15px 20px;
+}
+
+.sidenav.collection .collection-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidenav a.collection-item {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #00695c;
+}
+
+.sidenav a.collection-item:hover {
+    color: #00695c;
+}
+
+/*
+|--------------------------------------------------------------------------
+|  min-width: 993px
+|--------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 993px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+/*
+|--------------------------------------------------------------------------
+|  min-width: 601px
+|--------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 601px) {
+    .header-logo {
+        padding-top: 0;
+    }
+}
