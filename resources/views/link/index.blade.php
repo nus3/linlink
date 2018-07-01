@@ -10,6 +10,9 @@
 
 <div class="wrapper">
     @yield('sidebar')
+    <div class="contents">
+        test
+    </div>
 
 
 </div>
