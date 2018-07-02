@@ -11,7 +11,9 @@
 <div class="wrapper">
     @yield('sidebar')
     <div class="contents">
-        test
+        <div class="index-top">
+            <h3 class="index-top__title">お気に入りのリンクをシェアしよう</h3>
+        </div>
     </div>
 
 
