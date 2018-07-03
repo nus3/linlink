@@ -18,8 +18,8 @@
             </div>
         </div>
 
-        <div class="rank-section">
-            <h4 class="rank-section__title">アクセスランキング　Best5</h4>
+        <div class="section">
+            <h4 class="section__title">アクセスランキング　Best5</h4>
             <div class="rank-section__items">
                 <div class="card rank-section__item">
                     <div class="card-image">
@@ -28,6 +28,7 @@
                         <span class="card-title">No1</span>
                     </div>
                     <div class="card-content">
+                        <!-- TODO: イイネボタンの配置 -->
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
@@ -92,8 +93,43 @@
                     </div>
                 </div>
             </div>
+            <!-- TODO: リンクっぽくする -->
+            <a class="section__more-link" href="">もっとみる</a>
         </div>
 
+        <div class="section">
+            <h4 class="section__title">最近の追加されたLink</h4>
+            <table class="striped section__link-table">
+                <thead>
+                    <tr>
+                        <th>リンク名</th>
+                        <th>登録者</th>
+                        <th>URL</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- TODO:該当するリンクへ飛ぶ -->
+                    <tr>
+                        <td>Alvin</td>
+                        <td>Eclair</td>
+                        <td>$0.87</td>
+                    </tr>
+                    <tr>
+                        <td>Alan</td>
+                        <td>Jellybean</td>
+                        <td>$3.76</td>
+                    </tr>
+                    <tr>
+                        <td>Jonathan</td>
+                        <td>Lollipop</td>
+                        <td>$7.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- TODO: リンクっぽくする -->
+            <a class="section__more-link" href="">もっとみる</a>
+        </div>
     </div>
 </div>
 @endsection

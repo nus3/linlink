@@ -153,12 +153,16 @@ body {
     height: 50px;
 }
 
-.rank-section {
+.section {
     padding: 10px 30px;
 }
 
-.rank-section__title {
+.section__title {
     font-family: komorebiGothic;
+}
+
+.section__more-link {
+    padding: 10px;
 }
 
 .rank-section__items {
@@ -169,6 +173,10 @@ body {
 .rank-section__item {
     width: 250px;
     margin-right: 40px;
+}
+
+.section__link-table {
+    margin-bottom: 10px;
 }
 
 
@@ -218,7 +226,7 @@ body {
         padding: 10px 10px;
     }
 
-    .rank-section__title {
+    .section__title {
         text-align: center;
         font-size: 25px;
     }
