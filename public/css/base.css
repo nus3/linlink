@@ -153,6 +153,24 @@ body {
     height: 50px;
 }
 
+.rank-section {
+    padding: 10px 30px;
+}
+
+.rank-section__title {
+    font-family: komorebiGothic;
+}
+
+.rank-section__items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rank-section__item {
+    width: 250px;
+    margin-right: 40px;
+}
+
 
 /*
 |--------------------------------------------------------------------------
@@ -177,18 +195,40 @@ body {
 */
 
 @media screen and (max-width: 601px) {
-    .wrapper {
-        top: 56px;
-    }
-
+    /* navigation -------------*/ 
     .header-logo {
         padding-top: 0;
     }
+    
+    /* contents -------------*/ 
+    .wrapper {
+        top: 56px;
+    }
+    
+    /* index -------------*/ 
     .top-section {
         height: 200px;
     }
 
     .top-section__title {
         font-size: 22px;
+    }
+
+    .rank-section {
+        padding: 10px 10px;
+    }
+
+    .rank-section__title {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .rank-section__items {
+        justify-content: center;
+    }
+
+    .rank-section__item {
+        width: 330px;
+        margin-right: 0;
     }
 }
