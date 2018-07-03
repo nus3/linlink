@@ -11,10 +11,10 @@
 <div class="wrapper">
     @yield('sidebar')
     <div class="contents">
-        <div class="index-top">
-            <h3 class="index-top__title">お気に入りのリンクをシェアしよう</h3>
-            <div class="index-top__btn-wrapper">
-                <button class="btn waves-effect waves-light cyan darken-3 index-top__btn">シェアする</button>
+        <div class="top-section">
+            <h3 class="top-section__title">お気に入りのリンクをシェアしよう</h3>
+            <div class="top-section__btn-wrapper">
+                <button class="btn waves-effect waves-light cyan darken-3 top-section__btn">シェアする</button>
             </div>
         </div>
     </div>

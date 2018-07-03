@@ -125,7 +125,7 @@ body {
 |--------------------------------------------------------------------------
 */
 
-.index-top {
+.top-section {
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -135,20 +135,20 @@ body {
     background-size: cover;
 }
 
-.index-top__title {
+.top-section__title {
     text-align: center;
     color: #ffffff;
     font-weight: bold;
     font-family: komorebiGothic;
 }
 
-.index-top__btn-wrapper {
+.top-section__btn-wrapper {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
 
-.index-top__btn {
+.top-section__btn {
     width: 200px;
     height: 50px;
 }
@@ -184,11 +184,11 @@ body {
     .header-logo {
         padding-top: 0;
     }
-    .index-top {
+    .top-section {
         height: 200px;
     }
 
-    .index-top__title {
+    .top-section__title {
         font-size: 22px;
     }
 }
