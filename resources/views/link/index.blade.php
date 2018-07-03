@@ -97,7 +97,7 @@
             <a class="section__more-link" href="">もっとみる</a>
         </div>
 
-        <div class="section">
+        <div class="section current-link">
             <h4 class="section__title">最近の追加されたLink</h4>
             <table class="striped section__link-table">
                 <thead>

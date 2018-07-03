@@ -239,4 +239,8 @@ body {
         width: 330px;
         margin-right: 0;
     }
+
+    .current-link {
+        display: none;
+    }
 }
