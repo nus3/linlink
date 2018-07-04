@@ -1,7 +1,6 @@
 @extends('layouts.main')
 @include('layouts.header')
 @include('layouts.sidebar')
-@include('layouts.footer')
 
 @section('pageCss')
 @endsection
@@ -14,7 +13,7 @@
         <div class="top-section">
             <h3 class="top-section__title">お気に入りのリンクをシェアしよう</h3>
             <div class="top-section__btn-wrapper">
-                <button class="btn waves-effect waves-light cyan darken-3 top-section__btn">シェアする</button>
+                <button class="btn waves-effect waves-light cyan darken-3 top-section__btn" type="button" onclick="showFormModal()">シェアする</button>
             </div>
         </div>
 
@@ -89,7 +88,7 @@
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
                     <div class="card-action">
-                        <a href="#">This is a link</a>
+                        <a href="">This is a link</a>
                     </div>
                 </div>
             </div>
@@ -98,7 +97,7 @@
         </div>
 
         <div class="section current-link">
-            <h4 class="section__title">最近の追加されたLink</h4>
+            <h4 class="section__title">最近追加されたLink</h4>
             <table class="striped section__link-table">
                 <thead>
                     <tr>
@@ -131,10 +130,37 @@
             <a class="section__more-link" href="">もっとみる</a>
         </div>
     </div>
+
+    <!-- modal -->
+    <div id="formModal" class="modal blue-grey darken-3 form-modal">
+        <div class="modal-content">
+            <h4>Linkをシェアする</h4>
+            <form action="">
+                <label for="inputUrl" class="form-modal__input-text">
+                    <input id="inputUrl" type="text">
+                    <span>シェアするURL</span>
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <!-- TODO: スマホの場合はbottom-sheet使う -->
+    <!-- <div id="formModal" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div> -->
 </div>
 @endsection
 
 @section('pageJs')
 <script type="text/javascript">
 </script>
+<script type="text/javascript" src="/js/link/index.js"></script>
 @endsection
+
+@include('layouts.footer')
