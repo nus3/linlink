@@ -132,14 +132,14 @@
     </div>
 
     <!-- modal -->
-    <div id="formModal" class="modal blue-grey darken-3 form-modal">
+    <div id="formModal" class="modal blue-grey darken-3 formform-modal">
         <div class="modal-content">
             <h4>Linkをシェアする</h4>
             <form action="">
-                <label for="inputUrl" class="form-modal__input-text">
-                    <input id="inputUrl" type="text">
-                    <span>シェアするURL</span>
-                </label>
+                <div class="input-field form-modal__input-text ">
+                    <input id="inputUrl" type="text" class="validate grey-text">
+                    <label for="inputUrl">シェアするURL</label>
+                </div>
             </form>
         </div>
     </div>
