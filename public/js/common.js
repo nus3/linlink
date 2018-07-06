@@ -32,3 +32,9 @@ const showFormModalSp = () => {
 const closeFormModalSp = () => {
     $('#formModalSp').modal('close');
 }
+
+const moveToTop = () => {
+    const moveTo = new MoveTo();
+    const target = document.getElementById('top');
+    moveTo.move(target);
+}

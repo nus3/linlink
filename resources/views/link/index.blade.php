@@ -6,7 +6,6 @@
 @endsection
 
 @section('content')
-
 <div class="wrapper">
     @yield('sidebar')
     <div class="contents">
@@ -132,6 +131,12 @@
         </div>
     </div>
 
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large waves-effect waves-light cyan darken-3 floating-btn" href="javascript:void(0)" onclick="moveToTop()">
+            <i class="large material-icons ">arrow_upward</i>
+        </a>
+    </div>
+
     <!-- modal -->
     <div id="formModal" class="modal blue-grey darken-3">
         <div class="modal-content">
@@ -155,6 +160,8 @@
                         <label for="inputDescription">Linkの説明</label>
                     </div>
                 </div>
+
+                <!-- TODO: タグ登録のfield -->
 
                 <div class="form-modal__footer">
                     <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn">シェアする</button>
@@ -187,6 +194,8 @@
                         <label for="inputDescriptionSp">Linkの説明</label>
                     </div>
                 </div>
+
+                <!-- TODO: タグ登録のfield -->
 
                 <div class="form-modal__footer">
                     <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn">シェアする</button>

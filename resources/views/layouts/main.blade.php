@@ -18,6 +18,7 @@
 
     <script type="text/javascript" src="/js/vendor/jquery3.3.1.js"></script>
     <script type="text/javascript" src="/js/vendor/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/vendor/moveTo.min.js"></script>
     <script type="text/javascript" src="/js/common.js"></script>
     @yield('footer')
 </body>
