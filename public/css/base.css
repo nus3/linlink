@@ -23,7 +23,11 @@ body {
 */
 
 .display-none {
-    display: none;
+    display: none !important;
+}
+
+.sp {
+    display: none !important;
 }
 
 /*
@@ -290,6 +294,15 @@ body {
 */
 
 @media screen and (max-width: 601px) {
+    /* common -------------*/ 
+    .pc {
+        display: none !important;
+    }
+
+    .sp {
+        display: block !important;
+    }
+    
     /* navigation -------------*/ 
     .header-logo {
         padding-top: 0;

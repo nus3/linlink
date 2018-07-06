@@ -24,3 +24,11 @@ const showFormModal = () => {
 const closeFormModal = () => {
     $('#formModal').modal('close');
 }
+
+const showFormModalSp = () => {
+    $('#formModalSp').modal('open');
+}
+
+const closeFormModalSp = () => {
+    $('#formModalSp').modal('close');
+}
