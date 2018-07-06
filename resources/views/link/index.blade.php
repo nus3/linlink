@@ -132,13 +132,33 @@
     </div>
 
     <!-- modal -->
-    <div id="formModal" class="modal blue-grey darken-3 formform-modal">
+    <div id="formModal" class="modal blue-grey darken-3">
         <div class="modal-content">
-            <h4>Linkをシェアする</h4>
+            <h4 class="form-modal__title">Linkをシェアする</h4>
             <form action="">
-                <div class="input-field form-modal__input-text ">
-                    <input id="inputUrl" type="text" class="validate grey-text">
-                    <label for="inputUrl">シェアするURL</label>
+                <div class="row form-modal__input-wrapper">
+                    <div class="input-field col s12 form-modal__input-text">
+                        <input id="inputUrl" name="inputName" type="url" class="validate grey-text">
+                        <label for="inputUrl">シェアするURL</label>
+                    </div>
+                </div>
+                <div class="row form-modal__input-wrapper">
+                    <div class="input-field col s6 form-modal__input-text">
+                        <input id="inputName" name="inputName" type="text" class="validate grey-text">
+                        <label for="inputName">名前</label>
+                    </div>
+                </div>
+                <div class="row form-modal__input-wrapper">
+                    <div class="input-field col s12 form-modal__input-text">
+                        <textarea name="inputDescription" id="inputDescription" class="materialize-textarea"></textarea>
+                        <label for="inputDescription">Linkの説明</label>
+                    </div>
+                </div>
+
+                <div class="form-modal__footer">
+                    <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn">シェアする</button>
+                    <div style="width: 20px;"></div>
+                    <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn" onclick="closeFormModal()">キャンセル</button>
                 </div>
             </form>
         </div>

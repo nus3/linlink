@@ -125,13 +125,39 @@ body {
 |--------------------------------------------------------------------------
 */
 
+.form-modal__title {
+    color: #ffcc43;
+    font-weight: bold;
+    font-family: komorebiGothic;
+}
 
+.form-modal__input-wrapper {
+    margin-bottom: 0;
+}
+
+.input-field.form-modal__input-text input[type=url]:focus + label {
+    color: #ffcc43;
+}
+
+.input-field.form-modal__input-text input[type=url]:focus {
+    border-bottom: 1px solid #ffcc43;
+    box-shadow: 0 1px 0 0 #ffcc43;
+}
+
+.input-field.form-modal__input-text input[type=url].valid {
+    border-bottom: 1px solid #9e9e9e;
+    box-shadow: 0 1px 0 0 #9e9e9e;
+}
+
+.input-field.form-modal__input-text input[type=url].invalid {
+    border-bottom: 1px solid #9e9e9e;
+    box-shadow: 0 1px 0 0 #9e9e9e;
+}
 
 .input-field.form-modal__input-text input[type=text]:focus + label {
     color: #ffcc43;
 }
 
-/* TODO: 文字入力して、再度編集する時にアンダーラインが黄色にならないの解決させる */
 .input-field.form-modal__input-text input[type=text]:focus {
     border-bottom: 1px solid #ffcc43;
     box-shadow: 0 1px 0 0 #ffcc43;
@@ -147,6 +173,38 @@ body {
     box-shadow: 0 1px 0 0 #9e9e9e;
 }
 
+.input-field.form-modal__input-text textarea:focus + label {
+    color: #ffcc43;
+}
+
+.input-field.form-modal__input-text textarea:focus {
+    border-bottom: 1px solid #ffcc43;
+    box-shadow: 0 1px 0 0 #ffcc43;
+}
+
+.input-field.form-modal__input-text textarea.valid {
+    border-bottom: 1px solid #9e9e9e;
+    box-shadow: 0 1px 0 0 #9e9e9e;
+}
+
+.input-field.form-modal__input-text textarea.invalid {
+    border-bottom: 1px solid #9e9e9e;
+    box-shadow: 0 1px 0 0 #9e9e9e;
+}
+
+.input-field.form-modal__input-text textarea.materialize-textarea {
+    color: #9e9e9e;
+}
+
+.form-modal__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-modal__btn {
+    height: 50px;
+}
 
 /*
 |--------------------------------------------------------------------------

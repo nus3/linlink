@@ -20,3 +20,7 @@ $(document).ready(function () {
 const showFormModal = () => {
     $('#formModal').modal('open');
 }
+
+const closeFormModal = () => {
+    $('#formModal').modal('close');
+}
