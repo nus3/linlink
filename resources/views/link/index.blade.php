@@ -10,7 +10,9 @@
     @yield('sidebar')
     <div class="contents">
         <div class="top-section">
-            <h3 class="top-section__title">お気に入りのリンクをシェアしよう</h3>
+            <div class="row">
+                <h3 class="top-section__title anim-typewriter">お気に入りのリンクをシェアしよう</h3>
+            </div>
             <div class="top-section__btn-wrapper">
                 <button class="btn waves-effect waves-light cyan darken-3 top-section__btn pc" type="button" onclick="showFormModal()">シェアする</button>
                 <button class="btn waves-effect waves-light cyan darken-3 top-section__btn sp" type="button" onclick="showFormModalSp()">シェアする</button>
