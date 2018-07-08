@@ -163,7 +163,7 @@
                     </div>
                 </div>
 
-                <!-- TODO: タグ登録のfield -->
+                <!-- TODO: タグ登録のfield追加 -->
 
                 <div class="form-modal__footer">
                     <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn">シェアする</button>
@@ -197,7 +197,7 @@
                     </div>
                 </div>
 
-                <!-- TODO: タグ登録のfield -->
+                <!-- TODO: タグ登録のfield追加 -->
 
                 <div class="form-modal__footer">
                     <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn">シェアする</button>
