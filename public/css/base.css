@@ -129,7 +129,7 @@ body {
 
 /*
 |--------------------------------------------------------------------------
-|  common-modal
+|  form-modal
 |--------------------------------------------------------------------------
 */
 
@@ -213,6 +213,27 @@ body {
 .form-modal__btn {
     height: 50px;
 }
+
+.form-modal__tag-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 0 .75rem;
+}
+
+.form-modal__tag-title {
+    color: #9e9e9e;
+    margin: 0;
+}
+
+.chips .input {
+    color: #9e9e9e;
+}
+
+.chips .input::placeholder {
+    color: #9e9e9e;
+}
+
 
 /*
 |--------------------------------------------------------------------------

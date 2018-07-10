@@ -166,7 +166,12 @@
                     </div>
                 </div>
 
-                <!-- TODO: タグ登録のfield追加 -->
+                <div class="form-modal__tag-wrapper">
+                    <p class="form-modal__tag-title">タグ</p>
+                    <!-- TODO: プレースホルダとfocus時のcss修正 -->
+                    <div class="chips chips-placeholder"></div>
+                    <!-- TODO: jsで入力されたタグを取得できるか確認 -->
+                </div>
 
                 <div class="form-modal__footer">
                     <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn">シェアする</button>
@@ -200,7 +205,12 @@
                     </div>
                 </div>
 
-                <!-- TODO: タグ登録のfield追加 -->
+                <div class="form-modal__tag-wrapper">
+                    <p class="form-modal__tag-title">タグ</p>
+                    <!-- TODO: プレースホルダとfocus時のcss修正 -->
+                    <div class="chips chips-placeholder"></div>
+                    <!-- TODO: jsで入力されたタグを取得できるか確認 -->
+                </div>
 
                 <div class="form-modal__footer">
                     <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn">シェアする</button>
