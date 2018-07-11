@@ -169,8 +169,9 @@
                 <div class="form-modal__tag-wrapper">
                     <p class="form-modal__tag-title">タグ</p>
                     <!-- TODO: プレースホルダとfocus時のcss修正 -->
-                    <div class="chips chips-placeholder"></div>
-                    <!-- TODO: jsで入力されたタグを取得できるか確認 -->
+                    <div class="chips chips-placeholder">
+                        <input class="input" onfocus="changeTagTitleColor(event.type)" onblur="changeTagTitleColor(event.type)">
+                    </div>
                 </div>
 
                 <div class="form-modal__footer">
@@ -208,8 +209,9 @@
                 <div class="form-modal__tag-wrapper">
                     <p class="form-modal__tag-title">タグ</p>
                     <!-- TODO: プレースホルダとfocus時のcss修正 -->
-                    <div class="chips chips-placeholder"></div>
-                    <!-- TODO: jsで入力されたタグを取得できるか確認 -->
+                    <div class="chips chips-placeholder">
+                        <input class="input" onfocus="changeTagTitleColor(event.type)" onblur="changeTagTitleColor(event.type)">
+                    </div>
                 </div>
 
                 <div class="form-modal__footer">

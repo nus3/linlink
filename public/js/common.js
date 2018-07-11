@@ -43,3 +43,23 @@ const moveToTop = () => {
     const target = document.getElementById('top');
     moveTo.move(target);
 }
+
+/*
+|--------------------------------------------------------------------------
+|  modal
+|--------------------------------------------------------------------------
+*/
+
+const changeTagTitleColor = (eventType) => {
+    let colorCode;
+    if (eventType == 'focus') {
+        colorCode = "#ffcc43";
+    }else {
+        colorCode = "#9e9e9e";
+    }
+
+    const tagTitleElements = document.querySelectorAll('.form-modal__tag-title');
+    tagTitleElements.forEach(tagTitleElement => {
+        tagTitleElement.style.color = colorCode;
+    });
+}
