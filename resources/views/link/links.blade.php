@@ -1,12 +1,14 @@
 @extends('layouts.main')
 @include('layouts.header')
 @include('layouts.footer')
+@include('link.modal')
 
 @section('pageCss')
 @endsection
 
 @section('content')
-HelloWorld
+    HelloWorld
+@yield('link.modal')
 @endsection
 
 @section('pageJs')
