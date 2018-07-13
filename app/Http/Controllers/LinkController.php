@@ -13,4 +13,10 @@ class LinkController extends Controller
     {
         return view('link.index');
     }
+
+    // NOTE: 検索画面→search 検索処理→find
+    public function search()
+    {
+        return view('link.search');
+    }
 }

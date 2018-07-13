@@ -17,4 +17,8 @@ Route::get('/', [
     'uses' => 'LinkController@index'
 ])->name('LinkIndex');
 
-// TODO: タグ検索の画面へ遷移する用のルートを作る
+Route::get('/search', [
+    'middleware' => [
+    ],
+    'uses' => 'LinkController@search'
+])->name('LinkSearch');
