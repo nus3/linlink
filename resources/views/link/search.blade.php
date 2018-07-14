@@ -10,6 +10,8 @@
 <div class="wrapper">
     @yield('sidebar')
     <div class="contents">
+        <!-- TODO: デカメのインプット(chips)と下に上位20個のタグ(登録件数も) -->
+
     </div>
 
     <div class="fixed-action-btn">
