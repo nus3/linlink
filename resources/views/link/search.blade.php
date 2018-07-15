@@ -10,8 +10,32 @@
 <div class="wrapper">
     @yield('sidebar')
     <div class="contents">
-        <!-- TODO: デカメのインプット(chips)と下に上位20個のタグ(登録件数も) -->
+        <h4 class="section__title">Linkを探す</h4>
 
+        <!-- TODO: 上下中央ぞろえ -->
+        <div class="search-wrapper">
+            <form action="" class="search-wrapper__form">
+                <div class="chips chips-placeholder">
+                    <input class="input">
+                    <button type="button">探す</button>
+                </div>
+            </form>
+            <div class="search-wrapper__tags">
+                <!-- TODO: タグをボタンぽくする　押すとinputへ登録できるように -->
+                <div class="chip">
+                    Tag
+                    <i class="close material-icons">close</i>
+                </div>
+                <div class="chip">
+                    Tag
+                    <i class="close material-icons">close</i>
+                </div>
+                <div class="chip">
+                    Tag
+                    <i class="close material-icons">close</i>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="fixed-action-btn">
