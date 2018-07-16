@@ -19,4 +19,9 @@ class LinkController extends Controller
     {
         return view('link.search');
     }
+
+    public function links()
+    {
+        return view('link.links');
+    }
 }

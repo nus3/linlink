@@ -22,3 +22,9 @@ Route::get('/search', [
     ],
     'uses' => 'LinkController@search'
 ])->name('LinkSearch');
+
+Route::get('/links', [
+    'middleware' => [
+    ],
+    'uses' => 'LinkController@links'
+])->name('LinkLinks');

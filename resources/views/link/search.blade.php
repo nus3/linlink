@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@include('layouts.header')
+
 @include('layouts.sidebar')
 @include('link.modal')
 
@@ -16,7 +16,8 @@
                 <div id="search-Tags" class="chips chips-placeholder">
                     <input class="input">
                 </div>
-                <button class="btn waves-effect waves-light cyan darken-3" type="button">探す</button>
+                <!-- TODO: この後の遷移処理にローディングを入れる -->
+                <button class="btn waves-effect waves-light cyan darken-3" type="button" onclick="location.href ='{{ Route('LinkLinks') }}';">探す</button>
             </form>
             <h5 class="section__title">人気のタグ</h5>
             <div class="search-section__tags">
@@ -50,4 +51,3 @@
 <script type="text/javascript" src="/js/link/search.js"></script>
 @endsection
 
-@include('layouts.footer')

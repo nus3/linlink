@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@include('layouts.header')
+
 @include('layouts.sidebar')
 @include('link.modal')
 
@@ -111,10 +111,6 @@
                 </thead>
 
                 <tbody>
-                    <!-- TODO:該当するリンクへ飛ぶ 
-                        エンターでタグが追加される
-                        上位20個ぐらいのタグから選択もできる
-                    -->
                     <tr>
                         <td>Alvin</td>
                         <td>Eclair</td>
@@ -153,4 +149,3 @@
 <script type="text/javascript" src="/js/link/index.js"></script>
 @endsection
 
-@include('layouts.footer')

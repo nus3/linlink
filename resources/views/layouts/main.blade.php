@@ -1,3 +1,6 @@
+@include('layouts.header')
+@include('layouts.footer')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
