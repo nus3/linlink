@@ -7,6 +7,11 @@
 @endsection
 
 @section('content')
+<!-- TODO: ローディング時に3秒ぐらい表示して、消す -->
+<div class="load display-none">
+  <hr/><hr/><hr/><hr/>
+</div>
+
 <div class="wrapper">
     @yield('sidebar')
     <div class="contents">
