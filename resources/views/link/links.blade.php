@@ -7,9 +7,10 @@
 @endsection
 
 @section('content')
-<!-- TODO: ローディング時に3秒ぐらい表示して、消す -->
-<div class="load display-none">
-  <hr/><hr/><hr/><hr/>
+<div class="load-wrapper teal lighten-5">
+    <div class="load">
+        <hr/><hr/><hr/><hr/>
+    </div>
 </div>
 
 <div class="wrapper">
@@ -103,4 +104,5 @@
 @section('pageJs')
 <script type="text/javascript">
 </script>
+<script type="text/javascript" src="/js/link/load.js"></script>
 @endsection
