@@ -31,6 +31,7 @@
                     </div>
                     <div class="card-content">
                         <!-- TODO: イイネボタンの配置 -->
+                        <!-- TODO: アクセス数の配置 -->
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
