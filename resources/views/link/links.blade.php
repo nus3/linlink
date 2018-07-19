@@ -29,6 +29,7 @@
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
                     <div class="card-action">
+                        <p>アクセス数:25</p>
                         <a href="#">This is a link</a>
                     </div>
                 </div>
