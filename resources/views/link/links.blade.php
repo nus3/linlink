@@ -27,9 +27,9 @@
                         <!-- TODO: イイネボタンの配置 -->
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
+                        <p>アクセス数:25</p>
                     </div>
                     <div class="card-action">
-                        <p>アクセス数:25</p>
                         <a href="#">This is a link</a>
                     </div>
                 </div>
