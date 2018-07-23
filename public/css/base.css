@@ -356,8 +356,25 @@ body {
 .section__link-table {
     margin-bottom: 10px;
 }
-/* TODO: カードにイイネを追加する */
 
+.card .card-action {
+    padding: 5px 10px;
+}
+
+.rank-section__item-footer {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center; 
+}
+
+.rank-section__item-access {
+    display: flex;
+    align-items: center;
+}
+
+.rank-section__item-access-icon {
+    padding-right: 5px; 
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -392,6 +409,10 @@ body {
 
     .contents {
         padding-left: 0;
+    }
+
+    .section {
+        padding: 10px 30px 80px;
     }
 }
 

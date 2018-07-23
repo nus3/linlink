@@ -17,20 +17,23 @@
     @yield('sidebar')
     <div class="contents">
         <div class="section">
-            <h4 class="section__title">Link</h4>
+            <!-- TODO: 検索したタグを表記する -->
+            <h4 class="section__title">検索結果</h4>
             <div class="rank-section__items">
                 <div class="card rank-section__item">
                     <div class="card-image">
                         <img src="/img/dummy.jpg">
                     </div>
                     <div class="card-content">
-                        <!-- TODO: イイネボタンの配置 -->
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
-                        <p>アクセス数:25</p>
                     </div>
-                    <div class="card-action">
+                    <div class="card-action rank-section__item-footer">
                         <a href="#">This is a link</a>
+                        <p class="rank-section__item-access">
+                            <i class="material-icons rank-section__item-access-icon">visibility</i>
+                            25
+                        </p>
                     </div>
                 </div>
 
@@ -42,8 +45,12 @@
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
-                    <div class="card-action">
+                    <div class="card-action rank-section__item-footer">
                         <a href="#">This is a link</a>
+                        <p class="rank-section__item-access">
+                            <i class="material-icons rank-section__item-access-icon">visibility</i>
+                            25
+                        </p>
                     </div>
                 </div>
 
@@ -55,8 +62,12 @@
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
-                    <div class="card-action">
+                    <div class="card-action rank-section__item-footer">
                         <a href="#">This is a link</a>
+                        <p class="rank-section__item-access">
+                            <i class="material-icons rank-section__item-access-icon">visibility</i>
+                            25
+                        </p>
                     </div>
                 </div>
 
@@ -68,8 +79,12 @@
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
-                    <div class="card-action">
+                    <div class="card-action rank-section__item-footer">
                         <a href="#">This is a link</a>
+                        <p class="rank-section__item-access">
+                            <i class="material-icons rank-section__item-access-icon">visibility</i>
+                            25
+                        </p>
                     </div>
                 </div>
 
@@ -81,8 +96,12 @@
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
-                    <div class="card-action">
-                        <a href="">This is a link</a>
+                    <div class="card-action rank-section__item-footer">
+                        <a href="#">This is a link</a>
+                        <p class="rank-section__item-access">
+                            <i class="material-icons rank-section__item-access-icon">visibility</i>
+                            25
+                        </p>
                     </div>
                 </div>
             </div>

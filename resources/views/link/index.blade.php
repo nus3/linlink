@@ -30,13 +30,15 @@
                         <span class="card-title">No1</span>
                     </div>
                     <div class="card-content">
-                        <!-- TODO: イイネボタンの配置 -->
-                        <!-- TODO: アクセス数の配置 -->
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
-                    <div class="card-action">
+                    <div class="card-action rank-section__item-footer">
                         <a href="#">This is a link</a>
+                        <p class="rank-section__item-access">
+                            <i class="material-icons rank-section__item-access-icon">visibility</i>
+                            25
+                        </p>
                     </div>
                 </div>
 
@@ -49,8 +51,12 @@
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
-                    <div class="card-action">
+                    <div class="card-action rank-section__item-footer">
                         <a href="#">This is a link</a>
+                        <p class="rank-section__item-access">
+                            <i class="material-icons rank-section__item-access-icon">visibility</i>
+                            25
+                        </p>
                     </div>
                 </div>
 
@@ -63,8 +69,12 @@
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
-                    <div class="card-action">
+                    <div class="card-action rank-section__item-footer">
                         <a href="#">This is a link</a>
+                        <p class="rank-section__item-access">
+                            <i class="material-icons rank-section__item-access-icon">visibility</i>
+                            25
+                        </p>
                     </div>
                 </div>
 
@@ -77,8 +87,12 @@
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
-                    <div class="card-action">
+                    <div class="card-action rank-section__item-footer">
                         <a href="#">This is a link</a>
+                        <p class="rank-section__item-access">
+                            <i class="material-icons rank-section__item-access-icon">visibility</i>
+                            25
+                        </p>
                     </div>
                 </div>
 
@@ -91,8 +105,12 @@
                         <p>I am a very simple card. I am good at containing small bits of information.
                         I am convenient because I require little markup to use effectively.</p>
                     </div>
-                    <div class="card-action">
-                        <a href="">This is a link</a>
+                    <div class="card-action rank-section__item-footer">
+                        <a href="#">This is a link</a>
+                        <p class="rank-section__item-access">
+                            <i class="material-icons rank-section__item-access-icon">visibility</i>
+                            25
+                        </p>
                     </div>
                 </div>
             </div>
