@@ -10,4 +10,9 @@ class Access extends Model
     protected $table = 'accesses';
 
     protected $guarded = ['id'];
+
+    public function links()
+    {
+        return $this->belongsTo('App\ORM\Link');
+    }
 }

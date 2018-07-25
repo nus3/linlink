@@ -10,4 +10,11 @@ class Tag extends Model
     protected $table = 'tags';
 
     protected $guarded = ['id'];
+
+    public function links()
+    {
+        return $this->belongsToMany('App\ORM\Link', 'link_tag')
+            ->whereNull('link_tag.deleted_at')
+            ->withTimestamps();
+    }
 }

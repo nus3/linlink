@@ -8,5 +8,15 @@ class Link extends Eloquent
 
     protected $guarded = ['id'];
 
-    // TODO: linkとtagで多対多のリレーション
+    public function tags()
+    {
+        return $this->belongsToMany('App\ORM\Tag', 'link_tag')
+            ->whereNull('link_tag.deleted_at')
+            ->withTimestamps();
+    }
+
+    public function accesses()
+    {
+        return $this->hasMany('App\ORM\Access');
+    }
 }
