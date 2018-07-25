@@ -211,6 +211,15 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        /*
+        |--------------------------------------------------------------------------
+        | Facade Aliases
+        |--------------------------------------------------------------------------
+        */
+        // Model
+        'LinkModel'   => 'App\Facades\Models\Link',
+        'TagModel'    => 'App\Facades\Models\Tag',
+        'AccessModel' => 'App\Facades\Models\Access',
     ],
 
 ];

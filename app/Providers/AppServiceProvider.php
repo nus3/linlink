@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if (config('app.env') === 'production' || config('app.env') === 'staging') {
+            \URL::forceScheme('https');
+        }
     }
 
     /**
@@ -23,6 +25,22 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        /*
+        |--------------------------------------------------------------------------
+        | Model
+        |--------------------------------------------------------------------------
+        */
+        $this->app->bind('linkModel', function(){
+            return app('App\ORM\Link');
+        });
+
+        $this->app->bind('tagModel', function(){
+            return app('App\ORM\Tag');
+        });
+
+        $this->app->bind('accessModel', function(){
+            return app('App\ORM\Access');
+        });
+
     }
 }
