@@ -16,7 +16,8 @@ class CreateAccessesTable extends Migration
         Schema::create('accesses', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('link_id')->unsigned();
-            $table->unsignedInteger('session_id')->nullable();
+            // NOTE: unique()をつけるかどうか
+            $table->string('session_id', 256)->nullable();
 
             $table->softDeletes();
             $table->timestamps();
@@ -32,6 +33,6 @@ class CreateAccessesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('access');
+        Schema::dropIfExists('accesses');
     }
 }

@@ -11,6 +11,8 @@ class Tag extends Model
 
     protected $guarded = ['id'];
 
+    protected $dates = ['deleted_at'];
+
     public function links()
     {
         return $this->belongsToMany('App\ORM\Link', 'link_tag')

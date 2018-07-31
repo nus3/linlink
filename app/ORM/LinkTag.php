@@ -3,18 +3,13 @@
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Access extends Model
+class LinkTag extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'accesses';
+    protected $table = 'link_tag';
 
     protected $guarded = ['id'];
 
     protected $dates = ['deleted_at'];
-
-    public function links()
-    {
-        return $this->belongsTo('App\ORM\Link');
-    }
 }

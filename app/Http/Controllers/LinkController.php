@@ -24,5 +24,4 @@ class LinkController extends Controller
     {
         return view('link.links');
     }
-    // TODO: ファクトリーにダミーデータとデータベース初期化のコマンド作る
 }
