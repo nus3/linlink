@@ -17,6 +17,7 @@ $factory->define(App\ORM\Link::class, function (Faker $faker) {
     return [
         'key'         => $faker->md5,
         'url'         => $faker->url,
+        'ogp_url'     => $faker->url,
         'description' => $faker->realText(150),
         'name'        => $faker->name,
         'title'       => $faker->word,

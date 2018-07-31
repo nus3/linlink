@@ -18,6 +18,7 @@ class CreateLinksTable extends Migration
             $table->string('key', 32)->unique();
 
             $table->text('url')->nullable();
+            $table->text('ogp_url')->nullable();
             $table->text('description')->nullable();
             $table->string('name', 256)->nullable();
             $table->string('title', 256)->nullable();
