@@ -69,11 +69,12 @@ class DatabaseInitialize extends Command
         for ($i = 0; $i < 50; $i++) { 
             factory(\App\ORM\Link::class, 1)->create()
             ->each(function ($link) {
-                $num = rand(1, 20);
-                factory(\App\ORM\LinkTag::class, 5)->create([
+                $tagCount = rand(1, 5);
+                $accessCount = rand(1, 20);
+                factory(\App\ORM\LinkTag::class, $tagCount)->create([
                     'link_id' => $link->id,
                 ]);
-                factory(\App\ORM\Access::class, $num)->create([
+                factory(\App\ORM\Access::class, $accessCount)->create([
                     'link_id' => $link->id,
                 ]);
             });
