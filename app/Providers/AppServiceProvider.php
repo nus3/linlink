@@ -33,14 +33,26 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('linkModel', function(){
             return app('App\ORM\Link');
         });
-
+        
         $this->app->bind('tagModel', function(){
             return app('App\ORM\Tag');
         });
-
+        
         $this->app->bind('accessModel', function(){
             return app('App\ORM\Access');
         });
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Service
+        |--------------------------------------------------------------------------
+        */
 
+        $this->app->bind('linkService', function(){
+            return app('App\Services\Link');
+        });
+        $this->app->bind('tagService', function(){
+            return app('App\Services\Tag');
+        });
     }
 }

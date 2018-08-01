@@ -220,6 +220,10 @@ return [
         'LinkModel'   => 'App\Facades\Models\Link',
         'TagModel'    => 'App\Facades\Models\Tag',
         'AccessModel' => 'App\Facades\Models\Access',
+
+        // Service
+        'LinkService' => 'App\Facades\Services\Link',
+        'TagService' => 'App\Facades\Services\Tag',
     ],
 
 ];
