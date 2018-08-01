@@ -27,6 +27,7 @@
                     <div class="card rank-section__item">
                         <div class="card-image">
                             <!-- TODO: 画像のサイズがバラバラなるけどもどうするか -->
+                            <!-- TODO: OGP画像がなかったら時の画像を作る -->
                             @if(is_null($popularLink->ogp_url))
                                 <img src="/img/dummy.jpg">
                             @else
