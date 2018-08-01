@@ -7,10 +7,13 @@ use Session;
 
 use Illuminate\Http\Request;
 
+use LinkService;
+
 class LinkController extends Controller
 {
     public function index()
     {
+        LinkService::getPopularLinks();
         return view('link.index');
     }
 
