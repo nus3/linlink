@@ -23,133 +23,37 @@
         <div class="section">
             <h4 class="section__title">アクセスランキング　Best5</h4>
             <div class="rank-section__items">
-                <div class="card rank-section__item">
-                    <div class="card-image">
-                        <img src="/img/dummy.jpg">
-                        <!-- TODO: もうちょっとランキングを目立たせる -->
-                        <span class="card-title">No1</span>
+                @foreach ($popularLinks as $popularLink)
+                    <div class="card rank-section__item">
+                        <div class="card-image">
+                            <!-- TODO: 画像のサイズがバラバラなるけどもどうするか -->
+                            @if(is_null($popularLink->ogp_url))
+                                <img src="/img/dummy.jpg">
+                            @else
+                                <img src="{{ $popularLink->ogp_url }}">
+                            @endif
+                            <!-- TODO: もうちょっとランキングを目立たせる -->
+                            <span class="card-title">No{{$loop->iteration}}</span>
+                        </div>
+                        <div class="card-content">
+                            <!-- TODO: 文字数によるフッタの大きさを統一 -->
+                            <p>{{ $popularLink->description }}</p>
+                        </div>
+                        <div class="card-action rank-section__item-footer">
+                            <!-- TODO: リンク先へ遷移する前にアクセスレコードを作成する -->
+                            <a href="{{ $popularLink->url }}" target="_blank">リンクへ</a>
+                            <p class="rank-section__item-access">
+                                <i class="material-icons rank-section__item-access-icon">visibility</i>
+                                {{ $popularLink->accesses_count }}
+                            </p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action rank-section__item-footer">
-                        <a href="#">This is a link</a>
-                        <p class="rank-section__item-access">
-                            <i class="material-icons rank-section__item-access-icon">visibility</i>
-                            25
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card rank-section__item">
-                    <div class="card-image">
-                        <img src="/img/dummy.jpg">
-                        <span class="card-title">No2</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action rank-section__item-footer">
-                        <a href="#">This is a link</a>
-                        <p class="rank-section__item-access">
-                            <i class="material-icons rank-section__item-access-icon">visibility</i>
-                            25
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card rank-section__item">
-                    <div class="card-image">
-                        <img src="/img/dummy.jpg">
-                        <span class="card-title">No3</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action rank-section__item-footer">
-                        <a href="#">This is a link</a>
-                        <p class="rank-section__item-access">
-                            <i class="material-icons rank-section__item-access-icon">visibility</i>
-                            25
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card rank-section__item">
-                    <div class="card-image">
-                        <img src="/img/dummy.jpg">
-                        <span class="card-title">No4</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action rank-section__item-footer">
-                        <a href="#">This is a link</a>
-                        <p class="rank-section__item-access">
-                            <i class="material-icons rank-section__item-access-icon">visibility</i>
-                            25
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card rank-section__item">
-                    <div class="card-image">
-                        <img src="/img/dummy.jpg">
-                        <span class="card-title">No5</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action rank-section__item-footer">
-                        <a href="#">This is a link</a>
-                        <p class="rank-section__item-access">
-                            <i class="material-icons rank-section__item-access-icon">visibility</i>
-                            25
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <!-- TODO: リンクっぽくする -->
             <a class="section__more-link" href="">もっとみる</a>
         </div>
 
-        <div class="section current-link">
-            <h4 class="section__title">最近追加されたLink</h4>
-            <table class="striped section__link-table">
-                <thead>
-                    <tr>
-                        <th>リンク名</th>
-                        <th>登録者</th>
-                        <th>URL</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Alvin</td>
-                        <td>Eclair</td>
-                        <td>$0.87</td>
-                    </tr>
-                    <tr>
-                        <td>Alan</td>
-                        <td>Jellybean</td>
-                        <td>$3.76</td>
-                    </tr>
-                    <tr>
-                        <td>Jonathan</td>
-                        <td>Lollipop</td>
-                        <td>$7.00</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- TODO: リンクっぽくする -->
-            <a class="section__more-link" href="">もっとみる</a>
-        </div>
     </div>
 
     <div class="fixed-action-btn">

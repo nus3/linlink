@@ -13,8 +13,8 @@ class LinkController extends Controller
 {
     public function index()
     {
-        LinkService::getPopularLinks();
-        return view('link.index');
+        $links = LinkService::getLinks();
+        return view('link.index', $links);
     }
 
     // NOTE: 検索画面→search 検索処理→find
