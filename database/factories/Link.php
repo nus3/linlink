@@ -17,7 +17,9 @@ $factory->define(App\ORM\Link::class, function (Faker $faker) {
     return [
         'key'         => $faker->md5,
         'url'         => $faker->url,
-        'ogp_url'     => $faker->url,
+        'ogp_url'     => $faker->randomElement([
+            'http://nus3.moo.jp/wp-content/uploads/2017/07/Login.png', null
+        ]),
         'description' => $faker->realText(150),
         'name'        => $faker->name,
         'title'       => $faker->word,
