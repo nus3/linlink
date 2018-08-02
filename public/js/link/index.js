@@ -17,6 +17,8 @@ const submitLink = (deviceType) =>
         console.log(value, name);
     });
 
+    // TODO: ajaxでpostするところから
+
     // $.ajaxSetup({
     //     headers: {
     //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
