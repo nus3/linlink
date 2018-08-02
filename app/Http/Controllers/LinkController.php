@@ -17,6 +17,12 @@ class LinkController extends Controller
         return view('link.index', $links);
     }
 
+    public function create(Request $request)
+    {
+        $link = LinkService::save($request);
+        // TODO: json渡してmodalで登録成功メッセージ表示する
+    }
+
     // NOTE: 検索画面→search 検索処理→find
     public function search()
     {

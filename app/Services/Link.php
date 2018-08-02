@@ -33,4 +33,9 @@ class Link
             'recentlyLinks' => $recentlyLinks
         ];
     }
+
+    public function save($param)
+    {
+        
+    }
 }
