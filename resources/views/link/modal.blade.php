@@ -33,7 +33,7 @@
             <div class="form-modal__footer">
                 <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn" onclick="submitLink('pc')">シェアする</button>
                 <div style="width: 20px;"></div>
-                <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn" onclick="closeFormModal()">キャンセル</button>
+                <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn" onclick="closeModal('formModal')">キャンセル</button>
             </div>
         </form>
     </div>
@@ -74,9 +74,15 @@
             <div class="form-modal__footer">
                 <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn" onclick="submitLink('sp')">シェアする</button>
                 <div style="width: 20px;"></div>
-                <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn" onclick="closeFormModalSp()">キャンセル</button>
+                <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn" onclick="closeModal('formModalSp')">キャンセル</button>
             </div>
         </form>
+    </div>
+</div>
+
+<div id="doneModal" class="modal blue-grey darken-3">
+    <div class="modal-content">
+        <p class="form-modal__title done-modal__text">リンクをシェアしました</p>
     </div>
 </div>
 @endsection

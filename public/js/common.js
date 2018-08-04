@@ -22,20 +22,12 @@ $(document).ready(function () {
 |--------------------------------------------------------------------------
 */
 
-const showFormModal = () => {
-    $('#formModal').modal('open');
+const showModal = (modalName) => {
+    $(`#${modalName}`).modal('open')
 }
 
-const closeFormModal = () => {
-    $('#formModal').modal('close');
-}
-
-const showFormModalSp = () => {
-    $('#formModalSp').modal('open');
-}
-
-const closeFormModalSp = () => {
-    $('#formModalSp').modal('close');
+const closeModal = (modalName) => {
+    $(`#${modalName}`).modal('close')
 }
 
 const moveToTop = () => {

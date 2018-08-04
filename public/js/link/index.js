@@ -2,8 +2,6 @@
 const submitLink = (deviceType) => 
 {
     let formElement
-
-    // formDataの取得
     if (deviceType == 'pc') {
         formElement = document.getElementById('linkForm')
     }
@@ -13,31 +11,40 @@ const submitLink = (deviceType) =>
 
     const formData = new FormData(formElement)
 
-    formData.forEach(function (value, name) {
-        console.log(value, name);
-    });
+    // formData.forEach(function (value, name) {
+    //     console.log(value, name);
+    // });
 
-    // TODO: ajaxでpostするところから
-
-    // $.ajaxSetup({
-    //     headers: {
-    //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    //     }
-    // })
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    })
      
-    // $.ajax({
-    //     url: postsUrl,
-    //     method: 'post',
-    //     dataType: 'json',
-    //     data: formData,
-    //     //ajaxがdataを整形しない指定
-    //     processData: false,
-    //     contentType: false
-    // }).done(function (data) {
-    //     concole.log(data)
+    $.ajax({
+        url: '/api/link',
+        method: 'post',
+        dataType: 'json',
+        data: formData,
+        processData: false,
+        contentType: false
+    }).done((data) => {
+        if (deviceType == 'pc') {
+            closeModal('formModal')
+        }
+        else {
+            closeModal('formModalSp')
+        }
 
-    // }).fail(function (jqXHR, textStatus, errorThrown) {
-    //     console.log('ERROR', jqXHR, textStatus, errorThrown);
-    //     showErrorMessage(jqXHR);
-    // })
+        setTimeout( () => {
+            showModal('doneModal')
+            setTimeout(() => {
+                closeModal('doneModal')
+            }, 3000)
+        }, 1000)
+
+    }).fail((jqXHR, textStatus, errorThrown) => {
+        console.log('ERROR', jqXHR, textStatus, errorThrown);
+        // TODO: エラーページへリダイレクト
+    })
 }

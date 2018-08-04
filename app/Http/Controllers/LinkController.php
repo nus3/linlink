@@ -21,6 +21,7 @@ class LinkController extends Controller
     {
         $link = LinkService::save($request);
         // TODO: json渡してmodalで登録成功メッセージ表示する
+        return response()->json(['message' => 'succes']);
     }
 
     // NOTE: 検索画面→search 検索処理→find
