@@ -3,6 +3,8 @@ namespace App\Services;
 
 use LinkModel;
 
+use TagService;
+
 class Link
 {
     public function getPopularLinks($num = 15)
@@ -36,17 +38,22 @@ class Link
 
     public function save($params)
     {
+        // TODO: バリデーション
         $attributes = [
             'url' => $params['inputUrl'],
+            // TODO: OGPの取得
             // 'ogp_url' => $params['ogpUrl'],
             'description' => $params['inputDescription'],
             'name' => $params['inputName'],
             'title' => $params['inputTitle'],
         ];
 
+        // TODO: 例外処理
         $link = LinkModel::create($attributes);
 
-        // TODO: タグの登録
+        $tagNames = explode(',' , $params['inputTags']);
+        $tagIds = TagService::save($tagNames);
+        $link->tags()->sync($tagIds);
 
         return $link;
     }

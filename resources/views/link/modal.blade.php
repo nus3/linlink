@@ -9,7 +9,7 @@
                     <label for="inputTitle">リンク名</label>
                 </div>
             </div>
-            
+
             <div class="row form-modal__input-wrapper">
                 <div class="input-field col s12 form-modal__input-text">
                     <input id="inputUrl" name="inputUrl" type="url" class="validate grey-text">
@@ -26,7 +26,7 @@
 
             <div class="form-modal__tag-wrapper">
                 <p class="form-modal__tag-title">タグ</p>
-                <div class="chips chips-placeholder">
+                <div id="tags" class="chips chips-placeholder">
                     <input class="input" onfocus="changeTagTitleColor(event.type)" onblur="changeTagTitleColor(event.type)">
                 </div>
                 <!-- TODO: 入力されたタグの取得 -->

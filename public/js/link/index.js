@@ -12,9 +12,15 @@ const submitLink = (deviceType) =>
 
     const formData = new FormData(formElement)
 
-    // formData.forEach(function (value, name) {
-    //     console.log(value, name);
-    // });
+    const tagsElement = document.getElementById('tags')
+    const tagInstance = M.Chips.getInstance(tagsElement)
+    const tags = tagInstance.chipsData
+    let tagArray = []
+    tags.forEach( (tag) => {
+        tagArray.push(tag['tag'])
+    });
+
+    formData.append('inputTags', tagArray)
 
     $.ajaxSetup({
         headers: {
@@ -37,9 +43,11 @@ const submitLink = (deviceType) =>
             closeModal('formModalSp')
         }
 
+        // TODO: 登録し終わったら、入力内容をnullにする
+
         setTimeout( () => {
             showModal('doneModal')
-            setTimeout(() => {
+            setTimeout( () => {
                 closeModal('doneModal')
             }, 3000)
         }, 1000)
