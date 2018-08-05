@@ -34,8 +34,20 @@ class Link
         ];
     }
 
-    public function save($param)
+    public function save($params)
     {
-        
+        $attributes = [
+            'url' => $params['inputUrl'],
+            // 'ogp_url' => $params['ogpUrl'],
+            'description' => $params['inputDescription'],
+            'name' => $params['inputName'],
+            'title' => $params['inputTitle'],
+        ];
+
+        $link = LinkModel::create($attributes);
+
+        // TODO: タグの登録
+
+        return $link;
     }
 }

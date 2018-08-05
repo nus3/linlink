@@ -1,6 +1,7 @@
 
 const submitLink = (deviceType) => 
 {
+    // TODO: ボタンを二回押せないように
     let formElement
     if (deviceType == 'pc') {
         formElement = document.getElementById('linkForm')

@@ -5,16 +5,18 @@
         <form id="linkForm" name="linkForm">
             <div class="row form-modal__input-wrapper">
                 <div class="input-field col s12 form-modal__input-text">
+                    <input id="inputTitle" name="inputTitle" type="text" class="validate grey-text">
+                    <label for="inputTitle">リンク名</label>
+                </div>
+            </div>
+            
+            <div class="row form-modal__input-wrapper">
+                <div class="input-field col s12 form-modal__input-text">
                     <input id="inputUrl" name="inputUrl" type="url" class="validate grey-text">
                     <label for="inputUrl">シェアするURL</label>
                 </div>
             </div>
-            <div class="row form-modal__input-wrapper">
-                <div class="input-field col s6 form-modal__input-text">
-                    <input id="inputName" name="inputName" type="text" class="validate grey-text">
-                    <label for="inputName">名前</label>
-                </div>
-            </div>
+
             <div class="row form-modal__input-wrapper">
                 <div class="input-field col s12 form-modal__input-text">
                     <textarea name="inputDescription" id="inputDescription" class="materialize-textarea"></textarea>
@@ -28,6 +30,13 @@
                     <input class="input" onfocus="changeTagTitleColor(event.type)" onblur="changeTagTitleColor(event.type)">
                 </div>
                 <!-- TODO: 入力されたタグの取得 -->
+            </div>
+
+            <div class="row form-modal__input-wrapper">
+                <div class="input-field col s6 form-modal__input-text">
+                    <input id="inputName" name="inputName" type="text" class="validate grey-text">
+                    <label for="inputName">ニックネーム</label>
+                </div>
             </div>
 
             <div class="form-modal__footer">
@@ -45,15 +54,14 @@
         <form id="linkFormSp" name="linkFormSp">
             <div class="row form-modal__input-wrapper">
                 <div class="input-field col s12 form-modal__input-text">
-                    <input id="inputUrlSp" name="inputUrl" type="url" class="validate grey-text">
-                    <label for="inputUrlSp">シェアするURL</label>
+                    <input id="inputTitleSp" name="inputTitle" type="text" class="validate grey-text">
+                    <label for="inputTitleSp">リンク名</label>
                 </div>
             </div>
-            
             <div class="row form-modal__input-wrapper">
-                <div class="input-field col s6 form-modal__input-text">
-                    <input id="inputNameSp" name="inputName" type="text" class="validate grey-text">
-                    <label for="inputNameSp">名前</label>
+                <div class="input-field col s12 form-modal__input-text">
+                    <input id="inputUrlSp" name="inputUrl" type="url" class="validate grey-text">
+                    <label for="inputUrlSp">シェアするURL</label>
                 </div>
             </div>
 
@@ -68,6 +76,13 @@
                 <p class="form-modal__tag-title">タグ</p>
                 <div class="chips chips-placeholder">
                     <input class="input" onfocus="changeTagTitleColor(event.type)" onblur="changeTagTitleColor(event.type)">
+                </div>
+            </div>
+
+            <div class="row form-modal__input-wrapper">
+                <div class="input-field col s6 form-modal__input-text">
+                    <input id="inputNameSp" name="inputName" type="text" class="validate grey-text">
+                    <label for="inputNameSp">ニックネーム</label>
                 </div>
             </div>
 
