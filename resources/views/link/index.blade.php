@@ -35,9 +35,10 @@
                             <a class="btn-floating btn-large halfway-fab cyan darken-3 rank-section__item-count" href="javascript:void(0)">No{{$loop->iteration}}</a>
                         </div>
                         <div class="card-content">
-                            <h5 class="rank-section__item-access">
+                            <h5 class="rank-section__item-title">{{ $popularLink->title }}</h5>
+                            <h5 class="rank-section__item-access cyan-text text-darken-3">
                                 <i class="material-icons cyan-text text-darken-3 rank-section__item-access-icon">visibility</i>
-                                {{ $popularLink->accesses_count }}アクセス
+                                {{ $popularLink->accesses_count }}
                             </h5>
                             <p>{{ $popularLink->description }}</p>
                         </div>
