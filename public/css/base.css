@@ -347,6 +347,7 @@ body {
 
 .section__title {
     font-family: komorebiGothic;
+    text-align: center;
 }
 
 .section__more-link {
@@ -356,6 +357,7 @@ body {
 .rank-section__items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .rank-section__item {
@@ -371,6 +373,11 @@ body {
     padding: 5px 10px;
 }
 
+.rank-section__item-count{
+    text-align: center;
+    cursor: default;
+}
+
 .rank-section__item-footer {
     display: flex;
     justify-content: space-between;  
@@ -380,10 +387,13 @@ body {
 .rank-section__item-access {
     display: flex;
     align-items: center;
+    margin-top: 0;
+
 }
 
 .rank-section__item-access-icon {
-    padding-right: 5px; 
+    padding-right: 8px;
+    font-size: 35px;
 }
 
 /*
