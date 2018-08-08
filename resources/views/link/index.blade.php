@@ -26,7 +26,6 @@
                 @foreach ($popularLinks as $popularLink)
                     <div class="card rank-section__item">
                         <div class="card-image">
-                            <!-- TODO: 画像のサイズがバラバラなるけどもどうするか -->
                             @if(is_null($popularLink->ogp_url))
                                 <img src="/img/no_image.png">
                             @else
@@ -35,7 +34,6 @@
                             <a class="btn-floating halfway-fab cyan darken-3 rank-section__item-count" href="javascript:void(0)">No{{$loop->iteration}}</a>
                         </div>
                         <div class="card-content">
-                            <!-- TODO: 文字数によるフッタの大きさを統一 -->
                             <h5 class="rank-section__item-access">
                                 <i class="material-icons cyan-text text-darken-3 rank-section__item-access-icon ">visibility</i>
                                 {{ $popularLink->accesses_count }}アクセス
@@ -43,13 +41,6 @@
                             <p>{{ $popularLink->description }}</p>
                         </div>
                         <!-- TODO: リンク先へ遷移する前にアクセスレコードを作成する -->
-                        <!-- <div class="card-action rank-section__item-footer">
-                            <a href="{{ $popularLink->url }}" target="_blank">リンクへ</a>
-                            <p class="rank-section__item-access">
-                                <i class="material-icons rank-section__item-access-icon">visibility</i>
-                                {{ $popularLink->accesses_count }}
-                            </p>
-                        </div> -->
                     </div>
                 @endforeach
             </div>
