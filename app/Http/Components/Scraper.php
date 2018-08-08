@@ -22,6 +22,7 @@ class Scraper
         $contents = file_get_contents($url);
         $contentsCrawler = new Crawler($contents);
 
+        // TODO: 相対パスの対応　og:imageがなかった場合の対応
         $ogpUrl = $contentsCrawler->filter('meta[property="og:image"]')->attr('content');
 
         return $ogpUrl;
