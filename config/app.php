@@ -223,7 +223,10 @@ return [
 
         // Service
         'LinkService' => 'App\Facades\Services\Link',
-        'TagService' => 'App\Facades\Services\Tag',
+        'TagService'  => 'App\Facades\Services\Tag',
+
+        // Components
+        'Scraper' => 'App\Facades\Components\Scraper',
     ],
 
 ];

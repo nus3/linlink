@@ -47,12 +47,21 @@ class AppServiceProvider extends ServiceProvider
         | Service
         |--------------------------------------------------------------------------
         */
-
         $this->app->bind('linkService', function(){
             return app('App\Services\Link');
         });
+
         $this->app->bind('tagService', function(){
             return app('App\Services\Tag');
+        });
+
+        /*
+        |--------------------------------------------------------------------------
+        | Components
+        |--------------------------------------------------------------------------
+        */
+        $this->app->bind('scraper', function(){
+            return app('App\Http\Components\Scraper');
         });
     }
 }

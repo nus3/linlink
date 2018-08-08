@@ -1,6 +1,8 @@
 <?php
 namespace App\Services;
 
+use Scraper;
+
 use LinkModel;
 
 use TagService;
@@ -38,11 +40,12 @@ class Link
 
     public function save($params)
     {
+        $ogpUrl = Scraper::getOgpUrl($params['inputUrl']);
+
         // TODO: バリデーション
         $attributes = [
             'url' => $params['inputUrl'],
-            // TODO: OGPの取得
-            // 'ogp_url' => $params['ogpUrl'],
+            'ogp_url' => $ogpUrl,
             'description' => $params['inputDescription'],
             'name' => $params['inputName'],
             'title' => $params['inputTitle'],

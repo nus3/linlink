@@ -26,16 +26,17 @@
                 @foreach ($popularLinks as $popularLink)
                     <div class="card rank-section__item">
                         <div class="card-image">
+                            <!-- TODO: imageをクリックするとリンク先へリダイレクト -->
                             @if(is_null($popularLink->ogp_url))
                                 <img src="/img/no_image.png">
                             @else
                                 <img src="{{ $popularLink->ogp_url }}">
                             @endif
-                            <a class="btn-floating halfway-fab cyan darken-3 rank-section__item-count" href="javascript:void(0)">No{{$loop->iteration}}</a>
+                            <a class="btn-floating btn-large halfway-fab cyan darken-3 rank-section__item-count" href="javascript:void(0)">No{{$loop->iteration}}</a>
                         </div>
                         <div class="card-content">
                             <h5 class="rank-section__item-access">
-                                <i class="material-icons cyan-text text-darken-3 rank-section__item-access-icon ">visibility</i>
+                                <i class="material-icons cyan-text text-darken-3 rank-section__item-access-icon">visibility</i>
                                 {{ $popularLink->accesses_count }}アクセス
                             </h5>
                             <p>{{ $popularLink->description }}</p>

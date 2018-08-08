@@ -20,7 +20,6 @@ class LinkController extends Controller
     public function create(Request $request)
     {
         $link = LinkService::save($request);
-        // TODO: json渡してmodalで登録成功メッセージ表示する
         return response()->json(['message' => 'succes']);
     }
 
