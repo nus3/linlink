@@ -19,11 +19,24 @@ class Scraper
      */
     public function getOgpUrl($url)
     {
-        $contents = file_get_contents($url);
-        $contentsCrawler = new Crawler($contents);
+        $ogpUrl = null;
 
-        // TODO: 相対パスの対応　og:imageがなかった場合の対応
-        $ogpUrl = $contentsCrawler->filter('meta[property="og:image"]')->attr('content');
+        $contents = file_get_contents($url);
+        if (!$contents) {
+            return $ogpUrl;
+        }
+
+        $contentsCrawler = new Crawler($contents);
+        $ogpElement = $contentsCrawler->filter('meta[property="og:image"]');
+
+        if ($ogpElement->count()) {
+            $ogpUrl = $ogpElement->attr('content');
+
+
+
+
+
+        }
 
         return $ogpUrl;
     }

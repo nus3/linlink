@@ -41,6 +41,9 @@ class Link
     public function save($params)
     {
         $ogpUrl = Scraper::getOgpUrl($params['inputUrl']);
+        if (is_null($ogpUrl)) {
+            $ogpUrl = public_path('img/no_image.png');
+        }
 
         // TODO: バリデーション
         $attributes = [
