@@ -63,5 +63,15 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('scraper', function(){
             return app('App\Http\Components\Scraper');
         });
+
+        /*
+        |--------------------------------------------------------------------------
+        | Helpers
+        |--------------------------------------------------------------------------
+        */
+        $this->app->bind('urlManipulator', function(){
+            return app('App\Services\Helpers\UrlManipulator');
+        });
+
     }
 }

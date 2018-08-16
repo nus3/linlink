@@ -227,6 +227,9 @@ return [
 
         // Components
         'Scraper' => 'App\Facades\Components\Scraper',
+
+        // Helpers
+        'UrlManipulator' => 'App\Facades\Helpers\UrlManipulator',
     ],
 
 ];

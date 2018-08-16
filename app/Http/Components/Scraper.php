@@ -10,7 +10,6 @@ class Scraper
     {
     }
 
-
     /**
      * URLからOGPのurlを取得して返す
      *
@@ -31,11 +30,6 @@ class Scraper
 
         if ($ogpElement->count()) {
             $ogpUrl = $ogpElement->attr('content');
-
-
-
-
-
         }
 
         return $ogpUrl;

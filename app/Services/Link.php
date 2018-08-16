@@ -6,6 +6,7 @@ use Scraper;
 use LinkModel;
 
 use TagService;
+use UrlManipulator;
 
 class Link
 {
@@ -44,23 +45,29 @@ class Link
         if (is_null($ogpUrl)) {
             $ogpUrl = public_path('img/no_image.png');
         }
+        else {
+            $ogpUrl = UrlManipulator::convertRelativeToAbsolute($params['inputUrl'], $ogpUrl);
 
-        // TODO: バリデーション
-        $attributes = [
-            'url' => $params['inputUrl'],
-            'ogp_url' => $ogpUrl,
-            'description' => $params['inputDescription'],
-            'name' => $params['inputName'],
-            'title' => $params['inputTitle'],
-        ];
 
-        // TODO: 例外処理
-        $link = LinkModel::create($attributes);
 
-        $tagNames = explode(',' , $params['inputTags']);
-        $tagIds = TagService::save($tagNames);
-        $link->tags()->sync($tagIds);
+        }
 
-        return $link;
+        // // TODO: バリデーション
+        // $attributes = [
+        //     'url' => $params['inputUrl'],
+        //     'ogp_url' => $ogpUrl,
+        //     'description' => $params['inputDescription'],
+        //     'name' => $params['inputName'],
+        //     'title' => $params['inputTitle'],
+        // ];
+
+        // // TODO: 例外処理
+        // $link = LinkModel::create($attributes);
+
+        // $tagNames = explode(',' , $params['inputTags']);
+        // $tagIds = TagService::save($tagNames);
+        // $link->tags()->sync($tagIds);
+
+        // return $link;
     }
 }
