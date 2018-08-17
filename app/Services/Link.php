@@ -21,10 +21,10 @@ class Link
         return $links;
     }
 
-    public function getRecentlyLinks($num = 5)
+    public function getRecentlyLinks()
     {
         // TODO: 例外処理
-        $links = LinkModel::orderBy('created_at', 'desc')->limit($num)->get();
+        $links = LinkModel::withCount('accesses')->orderBy('created_at', 'desc')->paginate(12);
         return $links;
     }
 
@@ -47,27 +47,24 @@ class Link
         }
         else {
             $ogpUrl = UrlManipulator::convertRelativeToAbsolute($params['inputUrl'], $ogpUrl);
-
-
-
         }
 
-        // // TODO: バリデーション
-        // $attributes = [
-        //     'url' => $params['inputUrl'],
-        //     'ogp_url' => $ogpUrl,
-        //     'description' => $params['inputDescription'],
-        //     'name' => $params['inputName'],
-        //     'title' => $params['inputTitle'],
-        // ];
+        // TODO: バリデーション
+        $attributes = [
+            'url' => $params['inputUrl'],
+            'ogp_url' => $ogpUrl,
+            'description' => $params['inputDescription'],
+            'name' => $params['inputName'],
+            'title' => $params['inputTitle'],
+        ];
 
-        // // TODO: 例外処理
-        // $link = LinkModel::create($attributes);
+        // TODO: 例外処理
+        $link = LinkModel::create($attributes);
 
-        // $tagNames = explode(',' , $params['inputTags']);
-        // $tagIds = TagService::save($tagNames);
-        // $link->tags()->sync($tagIds);
+        $tagNames = explode(',' , $params['inputTags']);
+        $tagIds = TagService::save($tagNames);
+        $link->tags()->sync($tagIds);
 
-        // return $link;
+        return $link;
     }
 }

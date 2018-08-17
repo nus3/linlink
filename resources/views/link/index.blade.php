@@ -47,7 +47,7 @@
                 @endforeach
             </div>
             <!-- TODO: リンクっぽくする -->
-            <a class="section__more-link" href="">もっとみる</a>
+            <a class="section__more-link" href="{{ route('LinkLinks') }}">もっとみる</a>
         </div>
 
     </div>

@@ -31,6 +31,7 @@ class LinkController extends Controller
 
     public function links()
     {
-        return view('link.links');
+        $links = LinkService::getRecentlyLinks();
+        return view('link.links', ['links' => $links]);
     }
 }

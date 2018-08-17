@@ -7,106 +7,47 @@
 @endsection
 
 @section('content')
-<div class="load-wrapper teal lighten-5">
+<!-- TODO: ぺじネーションの際はローディング処理をしない -->
+<!-- <div class="load-wrapper teal lighten-5">
     <div class="load">
         <hr/><hr/><hr/><hr/>
     </div>
-</div>
+</div> -->
 
 <div class="wrapper">
     @yield('sidebar')
     <div class="contents">
         <div class="section">
-            <!-- TODO: 検索したタグを表記する -->
-            <h4 class="section__title">検索結果</h4>
+            <h4 class="section__title">Link一覧</h4>
             <div class="rank-section__items">
-                <div class="card rank-section__item">
-                    <div class="card-image">
-                        <img src="/img/dummy.jpg">
+                @foreach ($links as $link)
+                    <div class="card rank-section__item">
+                        <div class="card-image">
+                            <!-- TODO: imageをクリックするとリンク先へリダイレクト -->
+                            @if(is_null($link->ogp_url))
+                                <img src="/img/no_image.png">
+                            @else
+                                <img src="{{ $link->ogp_url }}">
+                            @endif
+                        </div>
+                        <div class="card-content">
+                            <h5 class="rank-section__item-title">{{ $link->title }}</h5>
+                            <h5 class="rank-section__item-access cyan-text text-darken-3">
+                                <i class="material-icons cyan-text text-darken-3 rank-section__item-access-icon">visibility</i>
+                                {{ $link->accesses_count }}
+                            </h5>
+                            <p>{{ $link->description }}</p>
+                        </div>
+                        <!-- TODO: リンク先へ遷移する前にアクセスレコードを作成する -->
                     </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action rank-section__item-footer">
-                        <a href="#">This is a link</a>
-                        <p class="rank-section__item-access">
-                            <i class="material-icons rank-section__item-access-icon">visibility</i>
-                            25
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card rank-section__item">
-                    <div class="card-image">
-                        <img src="/img/dummy.jpg">
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action rank-section__item-footer">
-                        <a href="#">This is a link</a>
-                        <p class="rank-section__item-access">
-                            <i class="material-icons rank-section__item-access-icon">visibility</i>
-                            25
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card rank-section__item">
-                    <div class="card-image">
-                        <img src="/img/dummy.jpg">
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action rank-section__item-footer">
-                        <a href="#">This is a link</a>
-                        <p class="rank-section__item-access">
-                            <i class="material-icons rank-section__item-access-icon">visibility</i>
-                            25
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card rank-section__item">
-                    <div class="card-image">
-                        <img src="/img/dummy.jpg">
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action rank-section__item-footer">
-                        <a href="#">This is a link</a>
-                        <p class="rank-section__item-access">
-                            <i class="material-icons rank-section__item-access-icon">visibility</i>
-                            25
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card rank-section__item">
-                    <div class="card-image">
-                        <img src="/img/dummy.jpg">
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action rank-section__item-footer">
-                        <a href="#">This is a link</a>
-                        <p class="rank-section__item-access">
-                            <i class="material-icons rank-section__item-access-icon">visibility</i>
-                            25
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
-            <!-- TODO: ここにペジネーション -->
+            @if (Request::is('links/search'))
+                {{ $links->appends(['query' => Request::query('query')])->links('layouts.pagination') }}
+            @else
+                {{ $links->links('layouts.pagination') }}
+            @endif
         </div>
     </div>
 
