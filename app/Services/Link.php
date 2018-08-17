@@ -28,22 +28,11 @@ class Link
         return $links;
     }
 
-    public function getLinks()
-    {
-        $popularLinks  = $this->getPopularLinks();
-        $recentlyLinks = $this->getRecentlyLinks();
-
-        return [
-            'popularLinks' => $popularLinks,
-            'recentlyLinks' => $recentlyLinks
-        ];
-    }
-
     public function save($params)
     {
         $ogpUrl = Scraper::getOgpUrl($params['inputUrl']);
         if (is_null($ogpUrl)) {
-            $ogpUrl = public_path('img/no_image.png');
+            $ogpUrl = url('img/no_image.png');
         }
         else {
             $ogpUrl = UrlManipulator::convertRelativeToAbsolute($params['inputUrl'], $ogpUrl);
@@ -72,8 +61,8 @@ class Link
     {
         $tagNameArray = explode(',', $tagNames);
         $links = LinkModel::whereHas('tags', function ($query) use ($tagNameArray){
+            // $query->whereIn('name', $tagNameArray);
             foreach ($tagNameArray as $tagName) {
-                logger($tagName);
                 $query->where('name', $tagName);
             }
         })->withCount('accesses')->orderBy('accesses_count', 'desc')->paginate(12);

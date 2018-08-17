@@ -1,6 +1,6 @@
 
 const addTag = (tagId) => {
-    const inputElem = document.getElementById('tags');
+    const inputElem = document.getElementById('searchTags');
     const instance = M.Chips.getInstance(inputElem);
     const tagName = document.getElementById(tagId).innerText;
     
@@ -10,7 +10,7 @@ const addTag = (tagId) => {
 }
 
 const submitSearch = () => {
-    const tagsElement = document.getElementById('tags')
+    const tagsElement = document.getElementById('searchTags')
     const tagInstance = M.Chips.getInstance(tagsElement)
     const tags = tagInstance.chipsData
     let tagArray = []

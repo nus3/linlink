@@ -36,6 +36,11 @@
                                 <i class="material-icons cyan-text text-darken-3 rank-section__item-access-icon">visibility</i>
                                 {{ $link->accesses_count }}
                             </h5>
+                            @foreach ($link->tags as $tag)
+                                <div class="chip">
+                                    <span>{{ $tag->name }}</span>
+                                </div>
+                            @endforeach
                             <p>{{ $link->description }}</p>
                         </div>
                         <!-- TODO: リンク先へ遷移する前にアクセスレコードを作成する -->
@@ -43,7 +48,7 @@
                 @endforeach
             </div>
 
-            @if (Request::is('links/find'))
+            @if (Request::is('find'))
                 {{ $links->appends(['tagNames' => $tagNames])->links('layouts.pagination') }}
             @else
                 {{ $links->links('layouts.pagination') }}

@@ -40,6 +40,11 @@
                                 <i class="material-icons cyan-text text-darken-3 rank-section__item-access-icon">visibility</i>
                                 {{ $popularLink->accesses_count }}
                             </h5>
+                            @foreach ($popularLink->tags as $tag)
+                                <div class="chip">
+                                    <span>{{ $tag->name }}</span>
+                                </div>
+                            @endforeach
                             <p>{{ $popularLink->description }}</p>
                         </div>
                         <!-- TODO: リンク先へ遷移する前にアクセスレコードを作成する -->

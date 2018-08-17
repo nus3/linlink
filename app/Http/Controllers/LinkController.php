@@ -14,8 +14,8 @@ class LinkController extends Controller
 {
     public function index()
     {
-        $links = LinkService::getLinks();
-        return view('link.index', $links);
+        $links = LinkService::getPopularLinks();
+        return view('link.index', ['popularLinks' => $links]);
     }
 
     public function create(Request $request)
