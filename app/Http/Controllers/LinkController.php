@@ -8,6 +8,7 @@ use Session;
 use Illuminate\Http\Request;
 
 use LinkService;
+use TagService;
 
 class LinkController extends Controller
 {
@@ -26,7 +27,8 @@ class LinkController extends Controller
     // NOTE: 検索画面→search 検索処理→find
     public function search()
     {
-        return view('link.search');
+        $tags = TagService::getPopularTags();
+        return view('link.search', ['tags' => $tags]);
     }
 
     public function links()

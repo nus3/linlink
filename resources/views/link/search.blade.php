@@ -9,28 +9,23 @@
 @section('content')
 <div class="wrapper">
     @yield('sidebar')
-    <div class="contents">
+    <div class="contents container">
         <div class="search-section">
             <h4 class="section__title">Linkを探す</h4>
             <form action="" class="search-section__form">
                 <div id="search-Tags" class="chips chips-placeholder">
                     <input class="input">
                 </div>
-                <!-- TODO: この後の遷移処理にローディングを入れる -->
                 <button class="btn waves-effect waves-light cyan darken-3" type="button" onclick="location.href ='{{ Route('LinkLinks') }}';">探す</button>
             </form>
             <h5 class="section__title">人気のタグ</h5>
             <div class="search-section__tags">
-                <div class="chip search-section__tag" onclick="addTag('tag-1')">
-                    <!-- TODO: DBのidをここに設定する -->
-                    <span id="tag-1">ブログ</span>(45)
-                </div>
-                <div class="chip search-section__tag" onclick="addTag('tag-2')">
-                    <span id="tag-2">デザイン</span>(45)
-                </div>
-                <div class="chip search-section__tag" onclick="addTag('tag-3')">
-                    <span id="tag-3">その他</span>(45)
-                </div>
+                @foreach ($tags as $tag)
+                    <div class="chip search-section__tag" onclick="addTag('tag{{ $tag->id }}')">
+                        <!-- TODO: DBのidをここに設定する -->
+                        <span id="tag{{ $tag->id }}">{{ $tag->name }}</span>( {{$tag->links_count}} )
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

@@ -5,9 +5,14 @@ use TagModel;
 
 class Tag
 {
-    public function getPopularTags($num = 20)
+    public function getPopularTags($num = 40)
     {
-        
+        $tags = TagModel::withCount('links')
+            ->orderBy('links_count', 'desc')
+            ->limit($num)
+            ->get();
+
+        return $tags;
     }
 
     public function save($tagNames)

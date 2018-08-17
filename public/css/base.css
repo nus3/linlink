@@ -30,6 +30,10 @@ body {
     display: none !important;
 }
 
+.pagination li.active {
+    background-color: #00838f;
+}
+
 /*
 |--------------------------------------------------------------------------
 |  loading
@@ -411,9 +415,14 @@ body {
     padding: 10px 30px;
 }
 
+.search-section__tags {
+    padding-top: 20px;
+}
+
 .search-section__tag {
     cursor: pointer;
     transition: 0.5s;
+    margin: 5px;
 }
 
 .search-section__tag:hover {
