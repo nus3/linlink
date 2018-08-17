@@ -67,4 +67,17 @@ class Link
 
         return $link;
     }
+
+    public function getLinksFromTagArray($tagNames)
+    {
+        $tagNameArray = explode(',', $tagNames);
+        $links = LinkModel::whereHas('tags', function ($query) use ($tagNameArray){
+            foreach ($tagNameArray as $tagName) {
+                logger($tagName);
+                $query->where('name', $tagName);
+            }
+        })->withCount('accesses')->orderBy('accesses_count', 'desc')->paginate(12);
+
+        return $links;
+    }
 }

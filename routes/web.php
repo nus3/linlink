@@ -23,6 +23,12 @@ Route::get('/search', [
     'uses' => 'LinkController@search'
 ])->name('LinkSearch');
 
+Route::get('/find', [
+    'middleware' => [
+    ],
+    'uses' => 'LinkController@find'
+])->name('LinkFind');
+
 Route::get('/links', [
     'middleware' => [
     ],

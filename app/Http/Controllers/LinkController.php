@@ -24,11 +24,16 @@ class LinkController extends Controller
         return response()->json(['message' => 'succes']);
     }
 
-    // NOTE: 検索画面→search 検索処理→find
     public function search()
     {
         $tags = TagService::getPopularTags();
         return view('link.search', ['tags' => $tags]);
+    }
+
+    public function find(Request $request)
+    {
+        $links = LinkService::getLinksFromTagArray($request->tagNames);
+        return view('link.links', ['links' => $links, 'tagNames' => $request->tagNames]);
     }
 
     public function links()

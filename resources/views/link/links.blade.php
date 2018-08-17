@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<!-- TODO: ぺじネーションの際はローディング処理をしない -->
+<!-- TODO: ペジネーションの際はローディング処理をしない -->
 <!-- <div class="load-wrapper teal lighten-5">
     <div class="load">
         <hr/><hr/><hr/><hr/>
@@ -43,8 +43,8 @@
                 @endforeach
             </div>
 
-            @if (Request::is('links/search'))
-                {{ $links->appends(['query' => Request::query('query')])->links('layouts.pagination') }}
+            @if (Request::is('links/find'))
+                {{ $links->appends(['tagNames' => $tagNames])->links('layouts.pagination') }}
             @else
                 {{ $links->links('layouts.pagination') }}
             @endif

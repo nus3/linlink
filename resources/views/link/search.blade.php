@@ -12,11 +12,12 @@
     <div class="contents container">
         <div class="search-section">
             <h4 class="section__title">Linkを探す</h4>
-            <form action="" class="search-section__form">
-                <div id="search-Tags" class="chips chips-placeholder">
+            <form id="searchForm" method="get" action="{{ route('LinkFind') }}" class="search-section__form">
+                <div id="tags" class="chips chips-placeholder">
                     <input class="input">
                 </div>
-                <button class="btn waves-effect waves-light cyan darken-3" type="button" onclick="location.href ='{{ Route('LinkLinks') }}';">探す</button>
+                <input id="tagNames" name="tagNames" type="text" class="display-none">
+                <button class="btn waves-effect waves-light cyan darken-3" type="button" onclick="submitSearch()">探す</button>
             </form>
             <h5 class="section__title">人気のタグ</h5>
             <div class="search-section__tags">

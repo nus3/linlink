@@ -99,5 +99,17 @@
     <div class="modal-content">
         <p class="form-modal__title done-modal__text">リンクをシェアしました</p>
     </div>
+    <div class="common-modal__footer">
+        <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn" onclick="closeModal('doneModal')">閉じる</button>
+    </div>
+</div>
+
+<div id="errorModal" class="modal blue-grey darken-3">
+    <div class="modal-content">
+        <p id="errorModalMessage" class="form-modal__title done-modal__text"></p>
+    </div>
+    <div class="common-modal__footer">
+        <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn" onclick="closeModal('errorModal')">閉じる</button>
+    </div>
 </div>
 @endsection

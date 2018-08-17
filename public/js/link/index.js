@@ -16,7 +16,7 @@ const submitLink = (deviceType) =>
     const tagInstance = M.Chips.getInstance(tagsElement)
     const tags = tagInstance.chipsData
     let tagArray = []
-    tags.forEach( (tag) => {
+    tags.forEach((tag) => {
         tagArray.push(tag['tag'])
     });
 
@@ -47,9 +47,6 @@ const submitLink = (deviceType) =>
 
         setTimeout( () => {
             showModal('doneModal')
-            setTimeout( () => {
-                closeModal('doneModal')
-            }, 3000)
         }, 1000)
 
     }).fail((jqXHR, textStatus, errorThrown) => {
