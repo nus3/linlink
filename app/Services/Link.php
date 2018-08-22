@@ -71,11 +71,12 @@ class Link
     public function createAccessRelatedLink($sessionId, $linkId)
     {
         $link = LinkModel::where('id', $linkId)->first();
-        $isAccessExists = $link->accesses->where('session_id', $sessionId)->exists();
+        $isAccessExists = $link->accesses()->where('session_id', $sessionId)->exists();
 
         if (!$isAccessExists) {
-            $access = new App\ORM\Access(['session_id' => $sessionId]);
-            $link->accesses->save($access);
+            $link->accesses()->create([
+                'session_id' => $sessionId
+            ]);
             return 'create';
         }
 

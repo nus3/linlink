@@ -21,7 +21,7 @@
             <h4 class="section__title">Link一覧</h4>
             <div class="rank-section__items">
                 @foreach ($links as $link)
-                    <div class="card rank-section__item" onclick="redirectLink('{{ $link->url }}, {{ $link->id }}')">
+                    <div class="card rank-section__item" onclick="redirectLink('{{ $link->url }}', '{{ $link->id }}')">
                         <div class="card-image">
                             @if(is_null($link->ogp_url))
                                 <img src="/img/no_image.png">
@@ -67,7 +67,7 @@
 
 @section('pageJs')
 <script type="text/javascript">
-var _accessPostUrl = {{ route('LinkAccess') }}
+    var _accessPostUrl = "{{ route('LinkAccess') }}";
 </script>
 <script type="text/javascript" src="/js/link/load.js"></script>
 <script type="text/javascript" src="/js/link/links.js"></script>
