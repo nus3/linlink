@@ -382,6 +382,7 @@ body {
 .rank-section__item {
     width: 250px;
     margin-right: 40px;
+    cursor: pointer;
 }
 
 .section__link-table {

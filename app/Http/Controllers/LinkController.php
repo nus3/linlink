@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Session;
 
 use Illuminate\Http\Request;
 
@@ -40,5 +39,14 @@ class LinkController extends Controller
     {
         $links = LinkService::getRecentlyLinks();
         return view('link.links', ['links' => $links]);
+    }
+
+    public function access(Request $request)
+    {
+        $sessionId = session()->getId();
+        $linkId = $request->link_id;
+
+        $message = LinkService::createAccessRelatedLink($sessionId, $linkId);
+        return response()->json(['message' => $message]);
     }
 }
