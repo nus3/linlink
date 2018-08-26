@@ -22,7 +22,7 @@ class CreateAccessesTable extends Migration
             $table->softDeletes();
             $table->timestamps();
 
-            $table->index(['link_id', 'session_id']);
+            // $table->index(['link_id', 'session_id']);
         });
     }
 
