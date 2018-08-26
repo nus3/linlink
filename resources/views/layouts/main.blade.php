@@ -8,6 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name = "csrf-token" content = "{{ @csrf_token }}">
+
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LinLink" />
+    <meta property="og:description" content="お気に入りのリンクをシェアしよう" />
+    <meta property="og:url" content="http://nus3.moo.jp/linlink/public" />
+    <meta property="og:site_name" content="LinLink" />
+    <meta property="og:image" content="{{ asset('/img/ogp.png') }}" />
+    <meta name="twitter:card" content="summary large image" />
+    <meta name="twitter:description" content="お気に入りのリンクをシェアしよう" />
+    <meta name="twitter:title" content="LinLink" />
+    <meta name="twitter:site" content="@YotaHada3" />
+    <meta name="twitter:image" content="{{ asset('/img/ogp.png') }}" />
+    <meta name="twitter:creator" content="@YotaHada3" />
+
     <link rel="icon" href="{{ asset('/img/logo.png') }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{{ asset('/css/vendor/materialize.min.css') }}" type="text/css" rel="stylesheet"/>
