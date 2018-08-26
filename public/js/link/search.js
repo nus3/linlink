@@ -1,12 +1,12 @@
 
 const addTag = (tagId) => {
-    const inputElem = document.getElementById('searchTags');
-    const instance = M.Chips.getInstance(inputElem);
-    const tagName = document.getElementById(tagId).innerText;
+    const inputElem = document.getElementById('searchTags')
+    const instance = M.Chips.getInstance(inputElem)
+    const tagName = document.getElementById(tagId).innerText
     
     instance.addChip({
         tag: tagName,
-    });
+    })
 }
 
 const submitSearch = () => {
@@ -16,7 +16,7 @@ const submitSearch = () => {
     let tagArray = []
     tags.forEach((tag) => {
         tagArray.push(tag['tag'])
-    });
+    })
 
     if (!tagArray.length) {
         const errorMessageElement = document.getElementById('errorModalMessage')
@@ -29,7 +29,7 @@ const submitSearch = () => {
     tagNameElement.value = tagArray
 
     const searchForm = document.getElementById('searchForm')
-    searchForm.submit();
+    searchForm.submit()
 }
 
 

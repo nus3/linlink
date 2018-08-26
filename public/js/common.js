@@ -6,14 +6,14 @@
 */
 
 $(document).ready(function () {
-    $('.sidenav').sidenav();
-    $('.modal').modal();
-    $('.chips').chips();
+    $('.sidenav').sidenav()
+    $('.modal').modal()
+    $('.chips').chips()
     $('.chips-placeholder').chips({
-        placeholder: 'Enter a tag',
-        secondaryPlaceholder: '+Tag',
-    });
-});
+        placeholder: 'Enterでタグ追加',
+        secondaryPlaceholder: '+タグ',
+    })
+})
 
 
 /*
@@ -31,9 +31,9 @@ const closeModal = (modalName) => {
 }
 
 const moveToTop = () => {
-    const moveTo = new MoveTo();
-    const target = document.getElementById('top');
-    moveTo.move(target);
+    const moveTo = new MoveTo()
+    const target = document.getElementById('top')
+    moveTo.move(target)
 }
 
 /*
@@ -43,17 +43,17 @@ const moveToTop = () => {
 */
 
 const changeTagTitleColor = (eventType) => {
-    let colorCode;
+    let colorCode
     if (eventType == 'focus') {
-        colorCode = "#ffcc43";
+        colorCode = "#ffcc43"
     }else {
-        colorCode = "#9e9e9e";
+        colorCode = "#9e9e9e"
     }
 
-    const tagTitleElements = document.querySelectorAll('.form-modal__tag-title');
+    const tagTitleElements = document.querySelectorAll('.form-modal__tag-title')
     tagTitleElements.forEach(tagTitleElement => {
-        tagTitleElement.style.color = colorCode;
-    });
+        tagTitleElement.style.color = colorCode
+    })
 }
 
 
@@ -75,9 +75,7 @@ const submitLink = (deviceType) => {
     let tagArray = []
     tags.forEach((tag) => {
         tagArray.push(tag['tag'])
-    });
-
-    console.log(tagArray)
+    })
 
     formData.append('inputTags', tagArray)
 
@@ -103,16 +101,44 @@ const submitLink = (deviceType) => {
         }
 
         // TODO: 登録し終わったら、入力内容をnullにする
+        clearLinkForm(deviceType)
 
         setTimeout(() => {
             showModal('doneModal')
         }, 1000)
 
     }).fail((jqXHR, textStatus, errorThrown) => {
-        console.log('ERROR', jqXHR, textStatus, errorThrown);
-        // TODO: エラーページへリダイレクト
+        console.log('ERROR', jqXHR, textStatus, errorThrown)
+        // TODO: エラーをslackに投げる
     })
 }
+
+const clearLinkForm = (deviceType) => {
+    let formElement
+    if (deviceType == 'pc') {
+        formElement = document.getElementById('linkForm')
+    }
+    else {
+        formElement = document.getElementById('linkFormSp')
+    }
+    const formData = new FormData(formElement)
+
+    formData.forEach((value, name) => {
+        let elements = document.getElementsByName(name)
+        elements.forEach(element => {
+            element.value = ''
+        })
+    })
+    M.updateTextFields();
+
+    $('.chips').chips()
+    $('.chips-placeholder').chips({
+        placeholder: 'Enterでタグ追加',
+        secondaryPlaceholder: '+タグ',
+    })
+
+}
+
 
 /*
 |--------------------------------------------------------------------------
@@ -139,7 +165,7 @@ const redirectLink = (redirectUrl, linkId) => {
         window.open(redirectUrl)
 
     }).fail((jqXHR, textStatus, errorThrown) => {
-        // console.log('ERROR', jqXHR, textStatus, errorThrown);
-        // TODO: エラーページへリダイレクト
+        // console.log('ERROR', jqXHR, textStatus, errorThrown)
+        // TODO: エラーをslackに投げる
     })
 }

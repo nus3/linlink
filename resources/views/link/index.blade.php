@@ -12,7 +12,8 @@
     <div class="contents">
         <div class="top-section">
             <div class="row">
-                <h3 class="top-section__title anim-typewriter">お気に入りのリンクをシェアしよう</h3>
+                <h3 class="top-section__title anim-typewriter pc">お気に入りのリンクをシェアしよう</h3>
+                <h3 class="top-section__title anim-typewriter sp">お気に入りをシェアしよう</h3>
             </div>
             <div class="top-section__btn-wrapper">
                 <button class="btn waves-effect waves-light cyan darken-3 top-section__btn pc" type="button" onclick="showModal('formModal')">シェアする</button>
