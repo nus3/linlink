@@ -69,6 +69,4 @@
 <script type="text/javascript">
     var _accessPostUrl = "{{ route('LinkAccess') }}";
 </script>
-<script type="text/javascript" src="{{ asset('/js/link/load.js') }} "></script>
-<script type="text/javascript" src="{{ asset('/js/link/links.js') }}"></script>
 @endsection

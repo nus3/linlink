@@ -19,7 +19,7 @@ class UserTrackCookie
 
         if (!$request->cookie('LINLINK_SESSION_ID')) {
             $sessionId = session()->getId();
-            $response->cookie('LINLINK_SESSION_ID', $sessionId, 60 * 24);
+            $response->cookie('LINLINK_SESSION_ID', $sessionId);
         }
 
         return $response;

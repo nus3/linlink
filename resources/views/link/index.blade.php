@@ -24,7 +24,7 @@
             <h4 class="section__title">アクセスランキング</h4>
             <div class="rank-section__items">
                 @foreach ($popularLinks as $popularLink)
-                    <div class="card rank-section__item">
+                    <div class="card rank-section__item" onclick="redirectLink('{{ $popularLink->url }}', '{{ $popularLink->id }}')">
                         <div class="card-image">
                             <!-- TODO: imageをクリックするとリンク先へリダイレクト -->
                             @if(is_null($popularLink->ogp_url))
@@ -69,7 +69,7 @@
 
 @section('pageJs')
 <script type="text/javascript">
+    var _accessPostUrl = "{{ route('LinkAccess') }}";
 </script>
-<script type="text/javascript" src="{{ asset('/js/link/index.js') }}"></script>
 @endsection
 
