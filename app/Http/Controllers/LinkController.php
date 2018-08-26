@@ -44,7 +44,6 @@ class LinkController extends Controller
     public function access(Request $request)
     {
         $sessionId = $request->cookie('LINLINK_SESSION_ID');
-        logger($sessionId);
         $linkId = $request->link_id;
 
         $message = LinkService::createAccessRelatedLink($sessionId, $linkId);
