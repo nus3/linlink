@@ -16,8 +16,7 @@ class CreateAccessesTable extends Migration
         Schema::create('accesses', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('link_id')->unsigned();
-            // NOTE: unique()をつけるかどうか
-            $table->string('session_id', 256)->nullable();
+            $table->longText('session_id')->nullable();
 
             $table->softDeletes();
             $table->timestamps();

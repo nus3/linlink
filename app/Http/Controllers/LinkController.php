@@ -20,7 +20,7 @@ class LinkController extends Controller
     public function create(Request $request)
     {
         $link = LinkService::save($request);
-        return response()->json(['message' => 'succes']);
+        return response()->json(['message' => 'success']);
     }
 
     public function search()
@@ -43,7 +43,8 @@ class LinkController extends Controller
 
     public function access(Request $request)
     {
-        $sessionId = session()->getId();
+        $sessionId = $request->cookie('LINLINK_SESSION_ID');
+        logger($sessionId);
         $linkId = $request->link_id;
 
         $message = LinkService::createAccessRelatedLink($sessionId, $linkId);

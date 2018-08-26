@@ -61,7 +61,6 @@ class Link
     {
         $tagNameArray = explode(',', $tagNames);
         $links = LinkModel::whereHas('tags', function ($query) use ($tagNameArray){
-            // HACK:: 複数のタグで検索される場合はand検索のが良い
             $query->whereIn('name', $tagNameArray);
         })->withCount('accesses')->orderBy('accesses_count', 'desc')->paginate(12);
 
