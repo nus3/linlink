@@ -10,7 +10,8 @@
     <meta name = "csrf-token" content = "{{ @csrf_token }}">
     <link rel="icon" href="/img/logo.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/css/vendor/materialize.min.css" type="text/css" rel="stylesheet"/>
+    <link href="{{ asset('/css/vendor/materialize.min.css') }}" type="text/css" rel="stylesheet"/>
+    <!-- <link href="/css/vendor/materialize.min.css" type="text/css" rel="stylesheet"/> -->
     <link href="/css/base.css" type="text/css" rel="stylesheet"/>
     @yield('pageCss')
     <title>linlink</title>
