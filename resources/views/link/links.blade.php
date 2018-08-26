@@ -24,7 +24,7 @@
                     <div class="card rank-section__item" onclick="redirectLink('{{ $link->url }}', '{{ $link->id }}')">
                         <div class="card-image">
                             @if(is_null($link->ogp_url))
-                                <img src="/img/no_image.png">
+                                <img src="{{ asset('/img/no_image.png') }}">
                             @else
                                 <img src="{{ $link->ogp_url }}">
                             @endif
@@ -69,6 +69,6 @@
 <script type="text/javascript">
     var _accessPostUrl = "{{ route('LinkAccess') }}";
 </script>
-<script type="text/javascript" src="/js/link/load.js"></script>
-<script type="text/javascript" src="/js/link/links.js"></script>
+<script type="text/javascript" src="{{ asset('/js/link/load.js') }} "></script>
+<script type="text/javascript" src="{{ asset('/js/link/links.js') }}"></script>
 @endsection

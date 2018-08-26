@@ -43,6 +43,6 @@
 @section('pageJs')
 <script type="text/javascript">
 </script>
-<script type="text/javascript" src="/js/link/search.js"></script>
+<script type="text/javascript" src="{{ asset('/js/link/search.js') }}"></script>
 @endsection
 

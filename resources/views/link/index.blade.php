@@ -28,7 +28,7 @@
                         <div class="card-image">
                             <!-- TODO: imageをクリックするとリンク先へリダイレクト -->
                             @if(is_null($popularLink->ogp_url))
-                                <img src="/img/no_image.png">
+                                <img src="{{ asset('/img/no_image.png') }}">
                             @else
                                 <img src="{{ $popularLink->ogp_url }}">
                             @endif
@@ -70,6 +70,6 @@
 @section('pageJs')
 <script type="text/javascript">
 </script>
-<script type="text/javascript" src="/js/link/index.js"></script>
+<script type="text/javascript" src="{{ asset('/js/link/index.js') }}"></script>
 @endsection
 
