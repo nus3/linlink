@@ -112,4 +112,8 @@
         <button type="button" class="btn waves-effect waves-light cyan darken-3 form-modal__btn" onclick="closeModal('errorModal')">閉じる</button>
     </div>
 </div>
+
+<script type="text/javascript">
+    var _createLinkPostUrl = "{{ route('LinkCreate') }}";
+</script>
 @endsection

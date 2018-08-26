@@ -86,7 +86,7 @@ const submitLink = (deviceType) => {
     })
 
     $.ajax({
-        url: '/api/link',
+        url: _createLinkPostUrl,
         method: 'post',
         dataType: 'json',
         data: formData,
