@@ -16,6 +16,8 @@
     <meta property="og:url" content="http://nus3.moo.jp/linlink/public" />
     <meta property="og:site_name" content="LinLink" />
     <meta property="og:image" content="{{ asset('/img/ogp.png') }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary large image" />
     <meta name="twitter:description" content="お気に入りのリンクをシェアしよう" />
     <meta name="twitter:title" content="LinLink" />
