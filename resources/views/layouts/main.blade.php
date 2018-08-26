@@ -18,12 +18,12 @@
     <meta property="og:image" content="{{ asset('/img/ogp.png') }}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary large image" />
-    <!-- <meta name="twitter:description" content="お気に入りのリンクをシェアしよう" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="お気に入りのリンクをシェアしよう" />
     <meta name="twitter:title" content="LinLink" />
     <meta name="twitter:site" content="@YotaHada3" />
     <meta name="twitter:image" content="{{ asset('/img/ogp.png') }}" />
-    <meta name="twitter:creator" content="@YotaHada3" /> -->
+    <meta name="twitter:creator" content="@YotaHada3" />
 
     <link rel="icon" href="{{ asset('/img/logo.png') }}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
