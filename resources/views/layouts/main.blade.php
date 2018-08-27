@@ -33,6 +33,16 @@
     <link href="{{ asset('/css/base.css') }}" type="text/css" rel="stylesheet"/>
     @yield('pageCss')
     <title>linlink</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-91374135-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-91374135-2');
+    </script>
 </head>
 <body>
     @yield('header')
