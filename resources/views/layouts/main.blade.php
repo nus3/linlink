@@ -1,5 +1,6 @@
 @include('layouts.header')
 @include('layouts.footer')
+@include('link.modal')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,5 +55,6 @@
     <script type="text/javascript" src="{{ asset('/js/vendor/moveTo.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/js/common.js') }}"></script>
     @yield('footer')
+    @yield('link.modal')
 </body>
 </html>

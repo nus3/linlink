@@ -1,7 +1,6 @@
 @extends('layouts.main')
 
 @include('layouts.sidebar')
-@include('link.modal')
 
 @section('pageCss')
 @endsection
@@ -35,8 +34,6 @@
             <i class="large material-icons ">arrow_upward</i>
         </a>
     </div>
-
-    @yield('link.modal')
 </div>
 @endsection
 

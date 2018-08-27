@@ -1,7 +1,6 @@
 @extends('layouts.main')
 
 @include('layouts.sidebar')
-@include('link.modal')
 
 @section('pageCss')
 @endsection
@@ -60,7 +59,6 @@
         </a>
     </div>
 
-    @yield('link.modal')
 </div>
 
 @endsection
