@@ -147,6 +147,8 @@ const clearLinkForm = (deviceType) => {
 */
 
 const redirectLink = (redirectUrl, linkId) => {
+    window.open(redirectUrl)
+
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -162,7 +164,6 @@ const redirectLink = (redirectUrl, linkId) => {
         },
     }).done((data) => {
         // console.log(data)
-        window.open(redirectUrl)
 
     }).fail((jqXHR, textStatus, errorThrown) => {
         // console.log('ERROR', jqXHR, textStatus, errorThrown)
