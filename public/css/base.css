@@ -498,6 +498,10 @@ body {
     }
 
     /* modal -------------*/
+    .modal .modal-content {
+        padding-bottom: 80px;
+    }
+
     .modal.bottom-sheet {
         max-height: 80%;
     }

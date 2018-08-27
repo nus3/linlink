@@ -9,6 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name = "csrf-token" content = "{{ @csrf_token }}">
 
+    <meta name="description" content="お気に入りのリンクを共有するところ">
+    <meta name="keywords" content="linlink,リンク共有,nus3">
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="LinLink" />
@@ -18,7 +20,7 @@
     <meta property="og:image" content="{{ asset('/img/ogp.png') }}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content="お気に入りのリンクをシェアしよう" />
     <meta name="twitter:title" content="LinLink" />
     <meta name="twitter:site" content="@YotaHada3" />
