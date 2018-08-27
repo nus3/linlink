@@ -350,7 +350,7 @@ body {
 
 @keyframes typewriterSp{
     from{width: 0;}
-    to{width: 12em;}
+    to{width: 13em;}
 }
 
 @keyframes blinkTextCursor{

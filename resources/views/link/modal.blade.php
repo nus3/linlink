@@ -26,7 +26,7 @@
 
             <div class="form-modal__tag-wrapper">
                 <p class="form-modal__tag-title">タグ</p>
-                <div id="tags" class="chips chips-placeholder">
+                <div id="tagsPc" class="chips chips-placeholder">
                     <input class="input" onfocus="changeTagTitleColor(event.type)" onblur="changeTagTitleColor(event.type)">
                 </div>
                 <!-- TODO: 入力されたタグの取得 -->
@@ -74,7 +74,7 @@
 
             <div class="form-modal__tag-wrapper">
                 <p class="form-modal__tag-title">タグ</p>
-                <div class="chips chips-placeholder">
+                <div id="tagsSp" class="chips chips-placeholder">
                     <input class="input" onfocus="changeTagTitleColor(event.type)" onblur="changeTagTitleColor(event.type)">
                 </div>
             </div>

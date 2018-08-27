@@ -60,23 +60,25 @@ const changeTagTitleColor = (eventType) => {
 const submitLink = (deviceType) => {
     // TODO: ボタンを二回押せないように
     let formElement
+    let tagsElement
+
     if (deviceType == 'pc') {
         formElement = document.getElementById('linkForm')
+        tagsElement = document.getElementById('tagsPc')
     }
     else {
         formElement = document.getElementById('linkFormSp')
+        tagsElement = document.getElementById('tagsSp')
     }
 
-    const formData = new FormData(formElement)
-
-    const tagsElement = document.getElementById('tags')
     const tagInstance = M.Chips.getInstance(tagsElement)
     const tags = tagInstance.chipsData
     let tagArray = []
     tags.forEach((tag) => {
         tagArray.push(tag['tag'])
     })
-
+    
+    const formData = new FormData(formElement)
     formData.append('inputTags', tagArray)
 
     $.ajaxSetup({
@@ -163,10 +165,7 @@ const redirectLink = (redirectUrl, linkId) => {
             'link_id': linkId
         },
     }).done((data) => {
-        // console.log(data)
-
     }).fail((jqXHR, textStatus, errorThrown) => {
-        // console.log('ERROR', jqXHR, textStatus, errorThrown)
         // TODO: エラーをslackに投げる
     })
 }
