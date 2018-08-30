@@ -56,7 +56,7 @@ return [
             'url' => env('LOG_SLACK_WEBHOOK_URL'),
             'username' => 'LinLink Log',
             'emoji' => ':innocent:',
-            'level' => 'error',
+            'level' => 'critical',
         ],
 
         'stderr' => [
