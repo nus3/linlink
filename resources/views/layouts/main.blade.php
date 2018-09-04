@@ -53,6 +53,7 @@
     <script type="text/javascript" src="{{ asset('/js/vendor/jquery3.3.1.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/js/vendor/materialize.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/js/vendor/moveTo.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/vendor/validator.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/js/common.js') }}"></script>
     @yield('footer')
     @yield('link.modal')
