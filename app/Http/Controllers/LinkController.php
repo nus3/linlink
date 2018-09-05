@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreLink as StoreLinkFormRequest;
 
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class LinkController extends Controller
         return view('link.index', ['popularLinks' => $links]);
     }
 
-    public function create(Request $request)
+    public function create(StoreLinkFormRequest $request)
     {
         $link = LinkService::save($request);
         return response()->json(['message' => 'success']);

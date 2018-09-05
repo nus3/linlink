@@ -29,7 +29,6 @@
                 <div id="tagsPc" class="chips chips-placeholder">
                     <input class="input" onfocus="changeTagTitleColor(event.type)" onblur="changeTagTitleColor(event.type)">
                 </div>
-                <!-- TODO: 入力されたタグの取得 -->
             </div>
 
             <div class="row form-modal__input-wrapper">
