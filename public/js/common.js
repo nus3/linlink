@@ -22,8 +22,15 @@ $(document).ready(function () {
 |--------------------------------------------------------------------------
 */
 
-const showModal = (modalName) => {
+const showModal = (modalName, deviceType) => {
     $(`#${modalName}`).modal('open')
+
+    // HACK: 初期値の設定をもっとスマートに
+    document.getElementById(`inputTitleError${deviceType}`).innerText = ''
+    document.getElementById(`inputUrlError${deviceType}`).innerText = ''
+    document.getElementById(`inputDescriptionError${deviceType}`).innerText = ''
+    document.getElementById(`inputTagsError${deviceType}`).innerText = ''
+    document.getElementById(`inputNameError${deviceType}`).innerText = ''
 }
 
 const closeModal = (modalName) => {
@@ -62,7 +69,7 @@ const submitLink = (deviceType) => {
     let formElement
     let tagsElement
 
-    if (deviceType == 'pc') {
+    if (deviceType == 'Pc') {
         formElement = document.getElementById('linkForm')
         tagsElement = document.getElementById('tagsPc')
     }
@@ -109,9 +116,29 @@ const submitLink = (deviceType) => {
             showModal('doneModal')
         }, 1000)
 
-    }).fail((jqXHR, textStatus, errorThrown) => {
-        console.log('ERROR', jqXHR, textStatus, errorThrown)
-        // TODO: エラーをslackに投げる
+    }).fail((data) => {
+        const errors = data.responseJSON.errors
+
+        Object.keys(errors).forEach((key) => {
+            document.getElementById(`${key}Error${deviceType}`).innerText = errors[key]
+        })
+
+        // HACK: errorじゃなかった処理のテキスト消すのスマートにしたい
+        if (!errors.hasOwnProperty('inputTitle')) {
+            document.getElementById(`inputTitleError${deviceType}`).innerText = ''
+        }
+        if (!errors.hasOwnProperty('inputUrl')) {
+            document.getElementById(`inputUrlError${deviceType}`).innerText = ''
+        }
+        if (!errors.hasOwnProperty('inputDescription')) {
+            document.getElementById(`inputDescriptionError${deviceType}`).innerText = ''
+        }
+        if (!errors.hasOwnProperty('inputTags')) {
+            document.getElementById(`inputTagsError${deviceType}`).innerText = ''
+        }
+        if (!errors.hasOwnProperty('inputName')) {
+            document.getElementById(`inputNameError${deviceType}`).innerText = ''
+        }
     })
 }
 

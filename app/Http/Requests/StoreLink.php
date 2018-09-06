@@ -50,8 +50,8 @@ class StoreLink extends FormRequest
         return [
             'inputTitle'       => 'bail|required|string|max:30',
             'inputUrl'         => 'bail|required|active_url',
-            'inputDescription' => 'bail|required|string|max:255',
-            'inputTags'        => 'bail|required|array',
+            'inputDescription' => 'bail|required|string|max:100',
+            'inputTags'        => 'bail|required',
             'inputName'        => 'bail|required|string|max:20',
         ];
     }
@@ -65,14 +65,21 @@ class StoreLink extends FormRequest
     {
         return [
             'inputTitle.required' => 'リンク名を入力してください',
+            'inputTitle.string'   => 'リンク名を文字列で入力してください',
+            'inputTitle.max'      => 'リンク名は30文字以下で入力してください',
 
-            'inputUrl.required' => 'URLを入力してください',
+            'inputUrl.required'   => 'URLを入力してください',
+            'inputUrl.active_url' => '有効なURLを入力してください',
 
             'inputDescription.required' => 'Linkの説明を入力してください',
+            'inputDescription.string'   => 'Linkの説明を文字列で入力してください',
+            'inputDescription.max'      => 'Linkの説明は100文字以下で入力してください',
 
             'inputTags.required' => 'タグを入力してください',
 
             'inputName.required' => 'ニックネームを入力してください',
+            'inputName.string'   => 'ニックネームを文字列で入力してください',
+            'inputName.max'      => 'ニックネームを20文字以下で入力してください',
         ];
     }
 }
