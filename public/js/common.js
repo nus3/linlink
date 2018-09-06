@@ -22,7 +22,7 @@ $(document).ready(function () {
 |--------------------------------------------------------------------------
 */
 
-const showModal = (modalName, deviceType) => {
+const showFormModal = (modalName, deviceType) => {
     $(`#${modalName}`).modal('open')
 
     // HACK: 初期値の設定をもっとスマートに
@@ -31,6 +31,10 @@ const showModal = (modalName, deviceType) => {
     document.getElementById(`inputDescriptionError${deviceType}`).innerText = ''
     document.getElementById(`inputTagsError${deviceType}`).innerText = ''
     document.getElementById(`inputNameError${deviceType}`).innerText = ''
+}
+
+const showModal = (modalName) => {
+    $(`#${modalName}`).modal('open')
 }
 
 const closeModal = (modalName) => {
@@ -102,7 +106,7 @@ const submitLink = (deviceType) => {
         processData: false,
         contentType: false
     }).done((data) => {
-        if (deviceType == 'pc') {
+        if (deviceType == 'Pc') {
             closeModal('formModal')
         }
         else {

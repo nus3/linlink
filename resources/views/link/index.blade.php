@@ -15,8 +15,8 @@
                 <h3 class="top-section__title anim-typewriter sp">お気に入りをシェアしよう</h3>
             </div>
             <div class="top-section__btn-wrapper">
-                <button class="btn waves-effect waves-light cyan darken-3 top-section__btn pc" type="button" onclick="showModal('formModal')">シェアする</button>
-                <button class="btn waves-effect waves-light cyan darken-3 top-section__btn sp" type="button" onclick="showModal('formModalSp')">シェアする</button>
+                <button class="btn waves-effect waves-light cyan darken-3 top-section__btn pc" type="button" onclick="showFormModal('formModal', 'Pc')">シェアする</button>
+                <button class="btn waves-effect waves-light cyan darken-3 top-section__btn sp" type="button" onclick="showFormModal('formModalSp', 'Sp')">シェアする</button>
             </div>
         </div>
 
