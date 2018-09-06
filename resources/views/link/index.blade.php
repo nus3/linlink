@@ -36,6 +36,7 @@
                         </div>
                         <div class="card-content">
                             <h5 class="rank-section__item-title">{{ $popularLink->title }}</h5>
+                            <h6 class="cyan-text text-darken-3">【{{ $popularLink->name }}】</h6>
                             <h5 class="rank-section__item-access cyan-text text-darken-3">
                                 <i class="material-icons cyan-text text-darken-3 rank-section__item-access-icon">visibility</i>
                                 {{ $popularLink->accesses_count }}
